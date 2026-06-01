@@ -276,8 +276,6 @@ Open the PR in the browser: `UpdateTrigger.java` diff, WireMock tests, descripti
 
 ## Slide 16 — « Code is cheap. Show me the talk? »
 
-*(callback slide — shown after the demo)*
-
 > 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai besoin métier : Ben, Product Manager dans une autre squad, voudrait lancer certaines actions dans un flow Kestra dès qu'une page Notion est modifiée. Aujourd'hui, notre plugin Notion permet d'envoyer des données, mais pas d'écouter ce qu'il s'y passe — ce trigger n'existe pas encore. Voyons ensemble la spéc pour ce trigger et confions le sujet à notre Plugins Agent Team du plan à la QA ! (ref: [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50))
 
 > 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real business need: Ben, Product Manager in another squad, wants to trigger certain actions in a Kestra flow whenever a Notion page is modified. Today, our Notion plugin can send data, but can't listen to what's happening there — this trigger doesn't exist yet. Let's look at the spec for this trigger together and hand the subject to our Plugins Agent Team from planning to QA! (ref: [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50))
@@ -287,6 +285,8 @@ Open the PR in the browser: `UpdateTrigger.java` diff, WireMock tests, descripti
 ---
 
 ## Slide 17 — 3000 lines of markdown
+
+*(callback slide — shown after the demo)*
 
 > 🇫🇷 Et voilà pour la démo ! Le plugin est généré, testé, et il fonctionne parfaitement. Finalement, une grande partie de ce que fait la squad Plugins est automatisable et peut être réduite à 3 000 lignes de Markdown sous forme de skills et d'agents. Ces fichiers markdown, c'est le manuel opérationnel de notre squad, découpé en expertises précises que les agents vont lire et appliquer à la lettre. Alors oui ça met un peu un coup à l'égo de faire ce constat, mais nous gardons le contrôle sur le plus important : le produit, l'architecture, les résultats, la release et le suivi une fois en production !
 
