@@ -231,9 +231,9 @@ Pendant que le developer agent tourne, montrer `kestra-plugin-issue/SKILL.md` et
 - Puis le skill `/kestra-plugin-qa` : browser-test end-to-end sur Kestra EE
 - Distinction subagents (séquentiel, `Agent` tool) vs Agent Team (parallèle, `/kestra-plugin-issues`)
 
-**5. Montrer le PR créé** *(3-4 min)*
+**5. Montrer la PR créée** *(3-4 min)*
 
-Ouvrir le PR dans le navigateur : diff `UpdateTrigger.java`, tests WireMock, description avec `closes:` et findings du reviewer en inline comments.
+Ouvrir la PR dans le navigateur : diff `UpdateTrigger.java`, tests WireMock, description avec `closes:` et findings du reviewer en inline comments.
 
 ---
 
