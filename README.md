@@ -180,6 +180,84 @@
 
 ---
 
+## 🎬 Demo Notes
+
+### 🇫🇷 Déroulé
+
+**2. Lance `/kestra-plugin-plan`** *(3-4 min live)*
+
+```
+/kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
+```
+
+Pendant que ça tourne :
+> "Le skill lit l'issue, génère un plan structuré — Design, Tasks, Edge Cases, Docs Impact — et le poste directement en commentaire GitHub."
+
+Montre le commentaire posté sur GitHub dans le navigateur.
+
+**3. Approval gate** *(1 min)*
+
+Commenter `/plan-approved` sur l'issue en direct.
+
+> "C'est le checkpoint humain. Le workflow ne peut pas continuer sans ce commentaire exact, posté par un membre de l'org kestra-io. C'est le garde-fou — pas un bouton 'yes', un acte délibéré."
+
+**4. Lance `/kestra-plugin-issue`** *(8-15 min — narration pendant l'attente)*
+
+```
+/kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
+```
+
+Pendant que le developer agent tourne, narrer :
+- Le skill vérifie le `/plan-approved` et l'appartenance à l'org
+- Il classe la complexité : ici **Standard** (token d'auth → QA requis)
+- Il spawne le `kestra-plugin-developer` en subagent
+- La chaîne d'agents : developer → reviewer → QA
+- Distinction subagents (séquentiel) vs Agent Team (parallèle, `/kestra-plugin-issues`)
+
+**5. Montre le PR créé** *(3-4 min)*
+
+Ouvrir le PR dans le navigateur : diff `UpdateTrigger.java`, tests WireMock, description avec `closes:` et findings du reviewer en inline comments.
+
+---
+
+### 🇬🇧 Walkthrough
+
+**2. Run `/kestra-plugin-plan`** *(3-4 min live)*
+
+```
+/kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
+```
+
+While it runs:
+> "The skill reads the issue, generates a structured plan — Design, Tasks, Edge Cases, Docs Impact — and posts it directly as a GitHub comment."
+
+Show the posted comment on GitHub in the browser.
+
+**3. Approval gate** *(1 min)*
+
+Comment `/plan-approved` on the issue live.
+
+> "This is the human checkpoint. The workflow cannot continue without this exact comment, posted by a kestra-io org member. This is the guardrail — not a 'yes' button, a deliberate act."
+
+**4. Run `/kestra-plugin-issue`** *(8-15 min — narrate while waiting)*
+
+```
+/kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
+```
+
+While the developer agent runs, narrate:
+- The skill verifies `/plan-approved` and org membership
+- It classifies complexity: here **Standard** (auth token → QA required)
+- It spawns `kestra-plugin-developer` as a subagent
+- The handoff chain: developer → reviewer → QA
+- Subagents (sequential) vs Agent Team (parallel, `/kestra-plugin-issues`)
+
+**5. Show the created PR** *(3-4 min)*
+
+Open the PR in the browser: `UpdateTrigger.java` diff, WireMock tests, description with `closes:` and reviewer inline comments.
+
+---
+
 ## Slide 16 — « Code is cheap. Show me the talk? »
 
 *(callback slide — shown after the demo)*
