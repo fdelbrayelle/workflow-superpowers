@@ -192,13 +192,21 @@ Ouvrir dans le navigateur :
 
 > "Le plugin Notion existe déjà, mais il lui manque quelque chose : un trigger. L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner."
 
+Montrer les fichiers sources des skills et agents dans le terminal (`cat` ou éditeur) :
+- `skills/sources/kestra-plugin-plan/SKILL.md` — le skill Phase 1 : lire l'issue, générer et poster le plan
+- `skills/sources/kestra-plugin-issue/SKILL.md` — le skill Phase 2 : approval gate, orchestration de la chaîne
+- `agents/sources/kestra-plugin-developer.md` — l'agent qui implémente, teste et ouvre la PR
+- `agents/sources/kestra-plugin-code-reviewer.md` — l'agent qui review le diff et rend un verdict
+
+> "Tout ce que vous voyez tourner ensuite, c'est du Markdown. Ces fichiers, c'est le manuel opérationnel de la squad."
+
 **2. Lancer `/kestra-plugin-plan`** *(3-4 min live)*
 
 ```
 /kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
 ```
 
-Pendant que ça tourne :
+Pendant que ça tourne, pointer sur `kestra-plugin-plan/SKILL.md` ouvert à côté :
 > "Le skill lit l'issue, génère un plan structuré — Design, Tasks, Edge Cases, Docs Impact — et le poste directement en commentaire GitHub."
 
 Montrer le commentaire posté sur GitHub dans le navigateur.
@@ -215,12 +223,13 @@ Commenter `/plan-approved` sur l'issue en direct.
 /kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
 ```
 
-Pendant que le developer agent tourne, narrer :
-- Le skill vérifie le `/plan-approved` et l'appartenance à l'org
+Pendant que le developer agent tourne, montrer `kestra-plugin-issue/SKILL.md` et narrer la chaîne :
+- Le skill vérifie le `/plan-approved` et l'appartenance à l'org (gate de sécurité)
 - Il classe la complexité : ici **Standard** (token d'auth → QA requis)
-- Il spawne le `kestra-plugin-developer` en subagent
-- La chaîne d'agents : developer → reviewer → QA
-- Distinction subagents (séquentiel) vs Agent Team (parallèle, `/kestra-plugin-issues`)
+- Il spawne l'agent `kestra-plugin-developer` (→ montrer `kestra-plugin-developer.md`) : implémentation complète en un batch, tests Gradle, PR
+- Puis l'agent `kestra-plugin-code-reviewer` (→ montrer `kestra-plugin-code-reviewer.md`) : review du diff complet, verdict APPROVE / REQUEST CHANGES / BLOCK
+- Puis le skill `/kestra-plugin-qa` : browser-test end-to-end sur Kestra EE
+- Distinction subagents (séquentiel, `Agent` tool) vs Agent Team (parallèle, `/kestra-plugin-issues`)
 
 **5. Montrer le PR créé** *(3-4 min)*
 
@@ -238,13 +247,21 @@ Open in the browser:
 
 > "The Notion plugin already exists, but it's missing something: a trigger. The issue was written by a human with everything needed to code without guessing."
 
+Show the skill and agent source files in the terminal (`cat` or editor):
+- `skills/sources/kestra-plugin-plan/SKILL.md` — Phase 1 skill: read the issue, generate and post the plan
+- `skills/sources/kestra-plugin-issue/SKILL.md` — Phase 2 skill: approval gate, orchestrates the full chain
+- `agents/sources/kestra-plugin-developer.md` — agent that implements, tests, and opens the PR
+- `agents/sources/kestra-plugin-code-reviewer.md` — agent that reviews the diff and returns a verdict
+
+> "Everything you're about to see running is Markdown. These files are the squad's operational manual."
+
 **2. Run `/kestra-plugin-plan`** *(3-4 min live)*
 
 ```
 /kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
 ```
 
-While it runs:
+While it runs, point to `kestra-plugin-plan/SKILL.md` open alongside:
 > "The skill reads the issue, generates a structured plan — Design, Tasks, Edge Cases, Docs Impact — and posts it directly as a GitHub comment."
 
 Show the posted comment on GitHub in the browser.
@@ -261,11 +278,13 @@ Comment `/plan-approved` on the issue live.
 /kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
 ```
 
-While the developer agent runs, narrate:
-- The skill verifies `/plan-approved` and org membership
+While the developer agent runs, show `kestra-plugin-issue/SKILL.md` and narrate the chain:
+- The skill verifies `/plan-approved` and org membership (security gate)
 - It classifies complexity: here **Standard** (auth token → QA required)
-- It spawns `kestra-plugin-developer` as a subagent
-- The handoff chain: developer → reviewer → QA
+- It spawns the `kestra-plugin-developer` agent (→ show `kestra-plugin-developer.md`): full batch implementation, Gradle tests, PR
+- Then the `kestra-plugin-code-reviewer` agent (→ show `kestra-plugin-code-reviewer.md`): reviews the full diff, returns APPROVE / REQUEST CHANGES / BLOCK
+- Then the `/kestra-plugin-qa` skill: end-to-end browser test on Kestra EE
+- Subagents (sequential, `Agent` tool) vs Agent Team (parallel, `/kestra-plugin-issues`)
 - Subagents (sequential) vs Agent Team (parallel, `/kestra-plugin-issues`)
 
 **5. Show the created PR** *(3-4 min)*
