@@ -184,6 +184,14 @@
 
 ### 🇫🇷 Déroulé
 
+**1. Montre le contexte** *(2 min)*
+
+Ouvrir dans le navigateur :
+- [kestra.io/plugins/plugin-notion](https://kestra.io/plugins/plugin-notion) — montrer les tasks existantes (`Create`, `Read`, `Update`, `Archive`) et l'absence de trigger
+- [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50) — lire le besoin métier, les acceptance criteria et les exemples YAML
+
+> "Le plugin Notion existe déjà, mais il lui manque quelque chose : un trigger. L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner."
+
 **2. Lance `/kestra-plugin-plan`** *(3-4 min live)*
 
 ```
@@ -221,6 +229,14 @@ Ouvrir le PR dans le navigateur : diff `UpdateTrigger.java`, tests WireMock, des
 ---
 
 ### 🇬🇧 Walkthrough
+
+**1. Show the context** *(2 min)*
+
+Open in the browser:
+- [kestra.io/plugins/plugin-notion](https://kestra.io/plugins/plugin-notion) — show the existing tasks (`Create`, `Read`, `Update`, `Archive`) and the absence of a trigger
+- [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50) — walk through the business need, acceptance criteria, and YAML examples
+
+> "The Notion plugin already exists, but it's missing something: a trigger. The issue was written by a human with everything needed to code without guessing."
 
 **2. Run `/kestra-plugin-plan`** *(3-4 min live)*
 
