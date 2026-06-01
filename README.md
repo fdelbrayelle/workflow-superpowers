@@ -184,7 +184,7 @@
 
 ### 🇫🇷 Déroulé
 
-**1. Montre le contexte** *(2 min)*
+**1. Montrer le contexte** *(2 min)*
 
 Ouvrir dans le navigateur :
 - [kestra.io/plugins/plugin-notion](https://kestra.io/plugins/plugin-notion) — montrer les tasks existantes (`Create`, `Read`, `Update`, `Archive`) et l'absence de trigger
@@ -192,7 +192,7 @@ Ouvrir dans le navigateur :
 
 > "Le plugin Notion existe déjà, mais il lui manque quelque chose : un trigger. L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner."
 
-**2. Lance `/kestra-plugin-plan`** *(3-4 min live)*
+**2. Lancer `/kestra-plugin-plan`** *(3-4 min live)*
 
 ```
 /kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
@@ -201,15 +201,15 @@ Ouvrir dans le navigateur :
 Pendant que ça tourne :
 > "Le skill lit l'issue, génère un plan structuré — Design, Tasks, Edge Cases, Docs Impact — et le poste directement en commentaire GitHub."
 
-Montre le commentaire posté sur GitHub dans le navigateur.
+Montrer le commentaire posté sur GitHub dans le navigateur.
 
-**3. Approval gate** *(1 min)*
+**3. Valider le plan** *(1 min)*
 
 Commenter `/plan-approved` sur l'issue en direct.
 
 > "C'est le checkpoint humain. Le workflow ne peut pas continuer sans ce commentaire exact, posté par un membre de l'org kestra-io. C'est le garde-fou — pas un bouton 'yes', un acte délibéré."
 
-**4. Lance `/kestra-plugin-issue`** *(8-15 min — narration pendant l'attente)*
+**4. Lancer `/kestra-plugin-issue`** *(8-15 min — narration pendant l'attente)*
 
 ```
 /kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
@@ -222,7 +222,7 @@ Pendant que le developer agent tourne, narrer :
 - La chaîne d'agents : developer → reviewer → QA
 - Distinction subagents (séquentiel) vs Agent Team (parallèle, `/kestra-plugin-issues`)
 
-**5. Montre le PR créé** *(3-4 min)*
+**5. Montrer le PR créé** *(3-4 min)*
 
 Ouvrir le PR dans le navigateur : diff `UpdateTrigger.java`, tests WireMock, description avec `closes:` et findings du reviewer en inline comments.
 
