@@ -65,12 +65,10 @@
 
 ## Slide 7 — What is Kestra?
 
-| Edition | Description |
-|---|---|
-| Open-source core | Orchestration Logic, Business Logic in any language, Event Driven Execution Engine, Control Plane |
-| Enterprise Edition | Security, Governance, Scalability, Guaranteed Support & SLA, Customer Success & Trainings |
-| Kestra Cloud | Fully managed |
-| Plugins & Ecosystem | 1400+ plugins for every integration |
+- Open-source core
+- Enterprise Edition
+- Kestra Cloud
+- Plugins & Ecosystem
 
 > 🇫🇷 Alors pour démarrer c'est quoi Kestra ? Kestra s'articule aujourd'hui autour de 4 piliers majeurs : Open Source pour la communauté, Enterprise pour la gouvernance à l'échelle, Cloud pour s'affranchir de la gestion d'infrastructure, Plugins & Ecosystem pour répondre à tous les défis d'orchestration modernes et étendre l'adoption et l'acquisition, c'est là où j'interviens avec ma squad.
 
@@ -164,9 +162,9 @@
 | L2 | Augmented | Human, AI suggestions | Copilot, autocomplete, basic API calls |
 | L1 | Manual | Human, every time | Prompts typed into web UI; no integration |
 
-> 🇫🇷 Bref, chez Kestra, tout est plugin. C'est ce qui fait la force et la flexibilité de notre écosystème. Mais développer ces plugins demande du temps, du code et de l'expertise humaine. C'est là que l'IA entre en jeu ! Avant de nous lancer dans la démo je voulais parler des différents niveaux de maturité d'utilisation de l'IA agentique. Ça va du niveau 1 — un simple chatbot dans le navigateur — au niveau 5 avec une autonomie complète multi-agents. Entre les deux on a plusieurs paliers où petit à petit l'humain délègue ses tâches aux agents qui deviennent de plus en plus autonomes et optimisés.
+> 🇫🇷 Bref, chez Kestra, tout est plugin. C'est ce qui fait la force et la flexibilité de notre écosystème. Mais développer ces plugins demande du temps, du code et de l'expertise humaine. C'est là que l'IA entre en jeu ! Avant de nous lancer dans la démo je voulais parler des différents niveaux de maturité d'utilisation de l'IA agentique. Ça va du niveau 1 — un simple chatbot dans le navigateur — au niveau 5 avec une autonomie complète multi-agents. Entre les deux on a plusieurs paliers où petit à petit l'humain délègue ses tâches aux agents qui deviennent de plus en plus autonomes et optimisés. C'est ce que je voudrais vous présenter maintenant en partie.
 
-> 🇬🇧 In short, at Kestra, everything is a plugin. That's what makes our ecosystem powerful and flexible. But developing these plugins takes time, code and human expertise. That's where AI comes in! Before jumping into the demo I wanted to talk about the different maturity levels of agentic AI usage. It ranges from level 1 — a simple chatbot in the browser — to level 5 with complete multi-agent autonomy. In between there are several stages where the human gradually delegates tasks to agents that become increasingly autonomous and optimized.
+> 🇬🇧 In short, at Kestra, everything is a plugin. That's what makes our ecosystem powerful and flexible. But developing these plugins takes time, code and human expertise. That's where AI comes in! Before jumping into the demo I wanted to talk about the different maturity levels of agentic AI usage. It ranges from level 1 — a simple chatbot in the browser — to level 5 with complete multi-agent autonomy. In between there are several stages where the human gradually delegates tasks to agents that become increasingly autonomous and optimized. That's what I'd like to present to you now, in part.
 
 ---
 
@@ -176,21 +174,53 @@
 
 > 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai besoin métier : Ben, Product Manager dans une autre squad, voudrait lancer certaines actions dans un flow Kestra dès qu'une page Notion est modifiée. Aujourd'hui, notre plugin Notion permet d'envoyer des données, mais pas d'écouter ce qu'il s'y passe — ce trigger n'existe pas encore. Voyons ensemble la spéc pour ce trigger et confions le sujet à notre Plugins Agent Team du plan à la QA ! (ref: [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50))
 
-> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real business need: Ben, Product Manager in another squad, wants to trigger certain actions in a Kestra flow whenever a Notion page is modified. Today, our Notion plugin can send data, but can't listen to what's happening there — this trigger doesn't exist yet. Let's look at the spec for this trigger together and hand the subject to our Plugins Agent Team from planning to QA!
+> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real business need: Ben, Product Manager in another squad, wants to trigger certain actions in a Kestra flow whenever a Notion page is modified. Today, our Notion plugin can send data, but can't listen to what's happening there — this trigger doesn't exist yet. Let's look at the spec for this trigger together and hand the subject to our Plugins Agent Team from planning to QA! (ref: [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50))
+
+*Demo resources: [Notion plugin docs](https://kestra.io/plugins/plugin-notion/notion-pages) · [GitHub issue #50](https://github.com/kestra-io/plugin-notion/issues/50) · asciinema backup recording*
 
 ---
 
-## Slide 16 — AI Maturity Level (post-demo)
+## Slide 16 — « Code is cheap. Show me the talk? »
+
+*(callback slide — shown after the demo)*
+
+> 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai besoin métier : Ben, Product Manager dans une autre squad, voudrait lancer certaines actions dans un flow Kestra dès qu'une page Notion est modifiée. Aujourd'hui, notre plugin Notion permet d'envoyer des données, mais pas d'écouter ce qu'il s'y passe — ce trigger n'existe pas encore. Voyons ensemble la spéc pour ce trigger et confions le sujet à notre Plugins Agent Team du plan à la QA ! (ref: [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50))
+
+> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real business need: Ben, Product Manager in another squad, wants to trigger certain actions in a Kestra flow whenever a Notion page is modified. Today, our Notion plugin can send data, but can't listen to what's happening there — this trigger doesn't exist yet. Let's look at the spec for this trigger together and hand the subject to our Plugins Agent Team from planning to QA! (ref: [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50))
+
+*Demo resources: [Notion plugin docs](https://kestra.io/plugins/plugin-notion/notion-pages) · [GitHub issue #50](https://github.com/kestra-io/plugin-notion/issues/50) · asciinema backup recording*
+
+---
+
+## Slide 17 — 3000 lines of markdown
+
+> 🇫🇷 Et voilà pour la démo ! Le plugin est généré, testé, et il fonctionne parfaitement. Finalement, une grande partie de ce que fait la squad Plugins est automatisable et peut être réduite à 3 000 lignes de Markdown sous forme de skills et d'agents. Ces fichiers markdown, c'est le manuel opérationnel de notre squad, découpé en expertises précises que les agents vont lire et appliquer à la lettre. Alors oui ça met un peu un coup à l'égo de faire ce constat, mais nous gardons le contrôle sur le plus important : le produit, l'architecture, les résultats, la release et le suivi une fois en production !
+
+> 🇬🇧 And that's the demo! The plugin is generated, tested, and it works perfectly. Ultimately, a large part of what the Plugins squad does is automatable and can be reduced to 3,000 lines of Markdown in the form of skills and agents. These markdown files are our squad's operational manual, broken down into precise areas of expertise that agents will read and apply to the letter. Yes, it's a bit of an ego check to realize this — but we keep control over what matters most: the product, architecture, results, release and monitoring once in production!
+
+---
+
+## Slide 18 — Product/Software Engineer in the loop
+
+1. 🧑‍💻 writes the issue
+2. 🤖 `/kestra-plugin-plan`
+3. 🧑‍💻 `/plan-approved`
+4. 🤖 `/kestra-plugin-issue` (developer & reviewer)
+5. 🧑‍💻 reviews, merges and releases
+
+---
+
+## Slide 19 — AI Maturity Level (post-demo)
 
 *(same table as slide 14)*
 
-> 🇫🇷 Et voilà pour la démo ! Le plugin est généré, testé, et il fonctionne parfaitement. Maintenant qu'on a vu la Plugins Agent Team en action, revenons 2 minutes à notre matrice de maturité. Si on analyse ce qu'il vient de se passer : l'IA n'a pas juste fait de l'autocomplétion ou du Copilot (le niveau 2). Elle a écrit, testé et déployé une équipe d'agents de manière quasi autonome. On est donc sur le niveau 4a où l'IA gère une grande partie du cycle de développement logiciel mais avec un humain dans la boucle pour les décisions clés. On est sorti du simple script déterministe vers de l'orchestration agentique.
+> 🇫🇷 Maintenant qu'on a vu la Plugins Agent Team en action, revenons 2 minutes à notre matrice de maturité. Si on analyse ce qu'il vient de se passer : l'IA n'a pas juste fait de l'autocomplétion ou du Copilot (le niveau 2). Elle a écrit, testé et déployé plusieurs agents de manière quasi autonome. On est donc sur le niveau 4a où l'IA gère une grande partie du cycle de développement logiciel mais avec un humain dans la boucle pour les décisions clés. On est sorti du simple script déterministe vers de l'orchestration agentique.
 
-> 🇬🇧 And that's the demo! The plugin is generated, tested, and it works perfectly. Now that we've seen the Plugins Agent Team in action, let's go back for 2 minutes to our maturity matrix. If we analyze what just happened: the AI didn't just do autocomplete or Copilot (level 2). It wrote, tested and deployed a team of agents in a near-autonomous manner. We are therefore at level 4a where AI manages a large part of the software development cycle but with a human in the loop for key decisions. We've moved beyond the simple deterministic script toward agentic orchestration.
+> 🇬🇧 Now that we've seen the Plugins Agent Team in action, let's go back for 2 minutes to our maturity matrix. If we analyze what just happened: the AI didn't just do autocomplete or Copilot (level 2). It wrote, tested and deployed several agents in a near-autonomous manner. We are therefore at level 4a where AI manages a large part of the software development cycle but with a human in the loop for key decisions. We've moved beyond the simple deterministic script toward agentic orchestration.
 
 ---
 
-## Slide 17 — AI Maturity Level (→ L4a highlighted)
+## Slide 20 — AI Maturity Level (→ L4a highlighted)
 
 *(same table, with L4a — Supervised Agentic highlighted as the target level)*
 
@@ -200,25 +230,7 @@
 
 ---
 
-## Slide 18 — 3000 lines of markdown
-
-> 🇫🇷 Finalement, une grande partie de ce que fait la squad Plugins est automatisable et peut être réduite à 3 000 lignes de Markdown sous forme de skills et d'agents. Ces fichiers markdown, c'est le manuel opérationnel de notre squad, découpé en expertises précises que les agents vont lire et appliquer à la lettre. Alors oui ça met un coup à l'égo de faire ce constat, mais nous gardons le contrôle sur le plus important : le produit, l'architecture, les résultats, la release et le suivi une fois en production !
-
-> 🇬🇧 Ultimately, a large part of what the Plugins squad does is automatable and can be reduced to 3,000 lines of Markdown in the form of skills and agents. These markdown files are our squad's operational manual, broken down into precise areas of expertise that agents will read and apply to the letter. Yes, it's a bit of an ego check to realize this — but we keep control over what matters most: the product, architecture, results, release and monitoring once in production!
-
----
-
-## Slide 19 — Software Engineer in the loop
-
-1. 👨‍💻 Engineer **writes the issue**
-2. 🤖 AI runs `/kestra-plugin-plan` — generates implementation plan
-3. 👨‍💻 Engineer runs `/plan-approved` — reviews and approves the plan
-4. 🤖 AI runs `/kestra-plugin-issue` — acts as both **developer** and **reviewer**
-5. 👨‍💻 Engineer **reviews, merges and releases**
-
----
-
-## Slide 20 — How much does 1 session cost?
+## Slide 21 — How much does 1 session cost?
 
 | Metric | Value |
 |---|---|
@@ -228,32 +240,26 @@
 | Cost | ~$2.70 (Opus for planning, Sonnet for the rest) |
 | Developer agent + QA share | ~70% of total input tokens |
 
-> 🇫🇷 Les 3000 lignes de markdown coûtent 21 500 tokens par session pour une feature ou un bug. Une feature comme le trigger Notion coûterait environ 500 000 tokens d'inputs et 36 000 d'outputs. Les outils comme rtk et caveman permettent de réduire drastiquement ces chiffres. Mais l'architecture même de Claude Code et les nombreuses lectures (du code, du web, de l'issue GitHub) font qu'il y a un palier incompressible. Pour une feature comme celle présentée ça coûte en moyenne 2,70 $ avec Opus pour le plan et Sonnet sur le reste. Avec un plan comme Claude Code Max x20 à 200 $/mois ça ferait 74 sessions soit environ 3,5 par jour en travaillant 20 jours par mois. Dans notre cas c'est l'agent développeur et le skill de QA qui prennent 70 % du total des tokens en input.
+> 🇫🇷 Les 3000 lignes de markdown coûtent 21 500 tokens par session pour une feature ou un bug. Une feature comme le trigger Notion coûterait environ 500 000 tokens d'inputs et 36 000 d'outputs. Les outils comme rtk et caveman permettent de réduire drastiquement ces chiffres. Mais l'architecture même de Claude Code et les nombreuses lectures (du code, du web, de l'issue GitHub) font qu'il y a un palier incompressible. Pour une feature comme celle que je vous ai montrée ça coûte en moyenne 2,70 $ avec Opus pour le plan et Sonnet sur le reste. Avec un plan comme Claude Code Max x20 à 200 $/mois ça ferait 74 sessions soit environ 3,5 par jour en travaillant 20 jours par mois ce qui permet déjà d'accélérer la productivité. Mais en réalité ce pricing permet d'exploiter beaucoup plus de tokens car ce n'est pas du pay as you go. Dans notre cas c'est l'agent développeur et le skill de QA qui prennent 70 % du total des tokens en input.
 
-> 🇬🇧 The 3,000 lines of markdown cost 21,500 tokens per session for a feature or bug. A feature like the Notion trigger would cost approximately 500,000 input tokens and 36,000 output tokens. Tools like rtk and caveman allow drastically reducing these numbers. But the architecture of Claude Code itself and the many file reads (code, web, GitHub issue) mean there's an incompressible baseline. For a feature like the one shown it costs on average $2.70 with Opus for the plan and Sonnet for the rest. With a plan like Claude Code Max x20 at $200/month that would be 74 sessions — about 3.5 per day working 20 days a month. In our case it's the developer agent and QA skill that account for 70% of total input tokens.
+> 🇬🇧 The 3,000 lines of markdown cost 21,500 tokens per session for a feature or bug. A feature like the Notion trigger would cost approximately 500,000 input tokens and 36,000 output tokens. Tools like rtk and caveman allow drastically reducing these numbers. But the architecture of Claude Code itself and the many file reads (code, web, GitHub issue) mean there's an incompressible baseline. For a feature like the one shown it costs on average $2.70 with Opus for the plan and Sonnet for the rest. With a plan like Claude Code Max x20 at $200/month that would be 74 sessions — about 3.5 per day working 20 days a month, which already accelerates productivity. But in reality this pricing allows exploiting many more tokens since it's not pay as you go. In our case it's the developer agent and QA skill that account for 70% of total input tokens.
 
 ---
 
-## Slide 21 — How could we improve?
+## Slide 22 — How could we improve?
 
 - Tokens saving (-35%)
 - Use Plugins Devtools
 - Support more complex QA
 - Go to the next level (L4b)
 
-> 🇫🇷 Le coût dominant, c'est la répétition du contexte à chaque tour, pas le code généré. En lisant moins de fichiers complets, en compressant le contexte plus tôt, et en allégeant ou sautant les étapes optionnelles comme le reviewer ou la QA browser pour les issues simples, on peut baisser de 35 % le coût d'une session. Utiliser nos Plugins Devtools notamment pour utiliser les scripts via l'outil Bash de Claude Code pour lancer Kestra. Nous pourrions imaginer une QA pour plugins plus complexes nécessitant par exemple un compte. Nous pouvons aller plus loin avec des étapes supplémentaires : GitHub action Claude Code, détection de labels GitHub par les agents, release par un agent, etc. Mais cela nécessite des tests, du temps et des garde-fous notamment en termes de sécurité. Le futur de Kestra s'écrit avec l'IA, et il s'écrit maintenant !
+> 🇫🇷 Le coût dominant, c'est la répétition du contexte à chaque tour, pas le code généré. En lisant moins de fichiers complets, en compressant le contexte plus tôt, et en allégeant ou sautant les étapes optionnelles comme le reviewer ou la QA browser pour les issues simples, on peut baisser de 35 % le coût d'une session. C'est ce que j'ai fait dans une PR dédiée en préparant cette conférence. Utiliser nos Plugins Devtools notamment pour utiliser les scripts via l'outil Bash de Claude Code pour lancer Kestra par exemple. Nous pourrions imaginer une QA pour plugins plus complexes nécessitant par exemple un compte. Nous pouvons aller plus loin et il y a des étapes pour ça : GitHub action Claude Code, détection de labels GitHub par les agents, release par un agent, etc. Mais cela nécessite des tests, du temps et des garde-fous notamment en termes de sécurité. Le futur de Kestra s'écrit avec l'IA, et il s'écrit maintenant !
 
-> 🇬🇧 The dominant cost is context repetition each turn, not the generated code. By reading fewer full files, compressing context earlier, and lightening or skipping optional steps like the reviewer or browser QA for simple issues, we can reduce session cost by 35%. Using our Plugins Devtools, particularly to use scripts via Claude Code's Bash tool to launch Kestra. We could imagine a QA for more complex plugins requiring an account for example. We can go further with additional steps: GitHub action Claude Code, agent-driven GitHub label detection, agent-driven releases, etc. But that requires testing, time and guardrails particularly around security. The future of Kestra is being written with AI, and it's being written now!
+> 🇬🇧 The dominant cost is context repetition each turn, not the generated code. By reading fewer full files, compressing context earlier, and lightening or skipping optional steps like the reviewer or browser QA for simple issues, we can reduce session cost by 35%. That's what I did in a dedicated PR while preparing this talk. Using our Plugins Devtools, particularly to use scripts via Claude Code's Bash tool to launch Kestra for example. We could imagine a QA for more complex plugins requiring an account for example. We can go further and there are steps for that: GitHub action Claude Code, agent-driven GitHub label detection, agent-driven releases, etc. But that requires testing, time and guardrails particularly around security. The future of Kestra is being written with AI, and it's being written now!
 
 ---
 
-## Slide 22 — Thank you! Any Questions?
+## Slide 23 — Thank you! Any Questions?
 
 - ⭐ [kestra-io/kestra](https://github.com/kestra-io/kestra)
 - 🦸 [workflow-superpowers](https://github.com/fdelbrayelle/workflow-superpowers)
-
----
-
-## Slide 23 — Kestra
-
-[kestra.io](https://kestra.io) · [kestra.io/plugins](https://kestra.io/plugins)
