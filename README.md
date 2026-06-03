@@ -251,6 +251,7 @@ Ouvrir `skills/sources/kestra-plugin-issue/SKILL.md` et narrer la chaîne :
 - Il classe la complexité : ici **Standard** (token d'auth → QA requis)
 - Il spawne l'agent `kestra-plugin-developer` (→ montrer `agents/sources/kestra-plugin-developer.md`) : implémentation complète en un batch, tests Gradle, PR
 - Puis l'agent `kestra-plugin-code-reviewer` (→ montrer `agents/sources/kestra-plugin-code-reviewer.md`) : review du diff complet, verdict APPROVE / REQUEST CHANGES / BLOCK
+- Montrer également `agents/kestra-plugins-guidelines.md` : les guidelines communes au developer et au code reviewer (conventions Java Kestra, tests, documentation, clean code)
 - Puis le skill `/kestra-plugin-qa` : browser-test end-to-end sur Kestra EE
 - Distinction subagents (séquentiel, `Agent` tool) vs Agent Team (parallèle, `/kestra-plugin-issues`)
 - Pendant la QA, Claude Code utilise les MCPs remote et publics de Kestra pour les plugins, les blueprints et la doc pour créer des flows réalistes
@@ -330,6 +331,7 @@ Open `skills/sources/kestra-plugin-issue/SKILL.md` and narrate the chain:
 - It classifies complexity: here **Standard** (auth token → QA required)
 - It spawns the `kestra-plugin-developer` agent (→ show `agents/sources/kestra-plugin-developer.md`): full batch implementation, Gradle tests, PR
 - Then the `kestra-plugin-code-reviewer` agent (→ show `agents/sources/kestra-plugin-code-reviewer.md`): reviews the full diff, returns APPROVE / REQUEST CHANGES / BLOCK
+- Also show `agents/kestra-plugins-guidelines.md`: guidelines shared by both developer and code reviewer (Kestra Java conventions, tests, documentation, clean code)
 - Then the `/kestra-plugin-qa` skill: end-to-end browser test on Kestra EE
 - Subagents (sequential, `Agent` tool) vs Agent Team (parallel, `/kestra-plugin-issues`)
 - During QA, Claude Code uses Kestra's remote and public MCPs for plugins, blueprints and docs to create realistic flows
