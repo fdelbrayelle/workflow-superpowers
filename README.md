@@ -261,13 +261,13 @@ Ouvrir `skills/sources/kestra-plugin-issue/SKILL.md` et narrer la chaîne :
 
 Ouvrir la PR dans le navigateur : diff `UpdateTrigger.java`, tests WireMock, description avec `closes:` et findings du reviewer en inline comments.
 
-**8. 🧑‍💻 Révision par la team `kestra-io/plugins`** *(sur GitHub)*
+**8. 🧑‍💻 Révision par la squad `kestra-io/plugins`** *(sur GitHub)*
 
-Un développeur de la team `kestra-io/plugins` review la PR sur GitHub : lit le diff, les tests, la description et les inline comments du reviewer IA.
+Un développeur de la squad `kestra-io/plugins` review la PR sur GitHub : lit le diff, les tests, la description et les inline comments du reviewer IA.
 
 **9. 🧑‍💻 Release du plugin**
 
-Un membre de la team merge la PR et release le plugin.
+Un membre de la squad merge la PR et release le plugin via [Plugins Devtools](https://github.com/kestra-io/plugins-devtools).
 
 ---
 
@@ -340,13 +340,13 @@ Open `skills/sources/kestra-plugin-issue/SKILL.md` and narrate the chain:
 
 Open the PR in the browser: `UpdateTrigger.java` diff, WireMock tests, description with `closes:` and reviewer inline comments.
 
-**8. 🧑‍💻 Review by the `kestra-io/plugins` team** *(on GitHub)*
+**8. 🧑‍💻 Review by the `kestra-io/plugins` squad** *(on GitHub)*
 
-A developer from the `kestra-io/plugins` team reviews the PR on GitHub: reads the diff, tests, description, and inline comments from the AI reviewer.
+A developer from the `kestra-io/plugins` squad reviews the PR on GitHub: reads the diff, tests, description, and inline comments from the AI reviewer.
 
 **9. 🧑‍💻 Plugin release**
 
-A team member merges the PR and releases the plugin.
+A squad member merges the PR and releases the plugin via [Plugins Devtools](https://github.com/kestra-io/plugins-devtools).
 
 ---
 
