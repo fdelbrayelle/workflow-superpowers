@@ -235,7 +235,7 @@ Ouvrir dans le navigateur :
 
 > "Le plugin Notion existe déjà, mais il lui manque quelque chose : un trigger. L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner."
 
-**2. Lancer `/kestra-plugin-plan`** *(~1 min)*
+**2. Lancer `/kestra-plugin-plan`** *(3-4 min live)*
 
 ```
 /kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
