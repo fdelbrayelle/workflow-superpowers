@@ -192,13 +192,18 @@ Ouvrir dans le navigateur :
 
 > "Le plugin Notion existe déjà, mais il lui manque quelque chose : un trigger. L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner."
 
-Montrer les fichiers sources des skills et agents dans le terminal (`cat` ou éditeur) :
-- `skills/sources/kestra-plugin-plan/SKILL.md` — le skill Phase 1 : lire l'issue, générer et poster le plan
-- `skills/sources/kestra-plugin-issue/SKILL.md` — le skill Phase 2 : approval gate, orchestration de la chaîne
-- `agents/sources/kestra-plugin-developer.md` — l'agent qui implémente, teste et ouvre la PR
-- `agents/sources/kestra-plugin-code-reviewer.md` — l'agent qui review le diff et rend un verdict
+**2. Lancer `/kestra-plugin-plan`** *(3-4 min live)*
 
-> "Tout ce que vous voyez tourner ensuite, c'est du Markdown. Ces fichiers, c'est le manuel opérationnel de la squad."
+```
+/kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
+```
+
+Montrer le commentaire posté sur GitHub dans le navigateur.
+
+**3. Montrer le skill plan** *(pendant l'exécution)*
+
+Ouvrir `skills/sources/kestra-plugin-plan/SKILL.md` dans le terminal :
+> "Le skill lit l'issue, génère un plan structuré — Design, Tasks, Edge Cases, Docs Impact — et le poste directement en commentaire GitHub. Tout ce que vous voyez tourner, c'est du Markdown. Ces fichiers, c'est le manuel opérationnel de la squad."
 
 Bonnes pratiques des skills respectées :
 - Tous sous 500 lignes
@@ -217,41 +222,32 @@ On a beaucoup itéré :
 
 `superpowers` est générique — cette PR est spécifique au domaine Kestra. Ce que `superpowers` apporte : 14 skills généraux (cycles TDD, phases plan/code/vérification, sous-agents parallèles, isolation par worktree). Fonctionne pour tout projet.
 
-**2. Lancer `/kestra-plugin-plan`** *(3-4 min live)*
-
-```
-/kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
-```
-
-Pendant que ça tourne, pointer sur `kestra-plugin-plan/SKILL.md` ouvert à côté :
-> "Le skill lit l'issue, génère un plan structuré — Design, Tasks, Edge Cases, Docs Impact — et le poste directement en commentaire GitHub."
-
-Montrer le commentaire posté sur GitHub dans le navigateur.
-
-**3. Valider le plan** *(1 min)*
+**4. Valider le plan** *(1 min)*
 
 Commenter `/plan-approved` sur l'issue en direct.
 
 > "C'est le checkpoint humain. Le workflow ne peut pas continuer sans ce commentaire exact, posté par un membre de l'org kestra-io. C'est le garde-fou — pas un bouton 'yes', un acte délibéré."
 
-**4. Lancer `/kestra-plugin-issue`** *(8-15 min — narration pendant l'attente)*
+**5. Lancer `/kestra-plugin-issue`** *(8-15 min — narration pendant l'attente)*
 
 ```
 /kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
 ```
 
-Pendant que le developer agent tourne, montrer `kestra-plugin-issue/SKILL.md` et narrer la chaîne :
+**6. Montrer le skill issue et les agents** *(pendant l'exécution)*
+
+Ouvrir `skills/sources/kestra-plugin-issue/SKILL.md` et narrer la chaîne :
 - Le skill vérifie le `/plan-approved` et l'appartenance à l'org (gate de sécurité)
 - Il classe la complexité : ici **Standard** (token d'auth → QA requis)
-- Il spawne l'agent `kestra-plugin-developer` (→ montrer `kestra-plugin-developer.md`) : implémentation complète en un batch, tests Gradle, PR
-- Puis l'agent `kestra-plugin-code-reviewer` (→ montrer `kestra-plugin-code-reviewer.md`) : review du diff complet, verdict APPROVE / REQUEST CHANGES / BLOCK
+- Il spawne l'agent `kestra-plugin-developer` (→ montrer `agents/sources/kestra-plugin-developer.md`) : implémentation complète en un batch, tests Gradle, PR
+- Puis l'agent `kestra-plugin-code-reviewer` (→ montrer `agents/sources/kestra-plugin-code-reviewer.md`) : review du diff complet, verdict APPROVE / REQUEST CHANGES / BLOCK
 - Puis le skill `/kestra-plugin-qa` : browser-test end-to-end sur Kestra EE
 - Distinction subagents (séquentiel, `Agent` tool) vs Agent Team (parallèle, `/kestra-plugin-issues`)
 - Pendant la QA, Claude Code utilise les MCPs remote et publics de Kestra pour les plugins, les blueprints et la doc pour créer des flows réalistes
 - On n'a pas fait de plugin Claude Code pour ne pas s'enfermer dans ce harness et laisser la possibilité d'utiliser les skills & agents dans Codex ou OpenCode
 - Des guardrails sont ajoutés en complément dans les skills & agents pour être casque, ceinture, bretelles
 
-**5. Montrer la PR créée** *(3-4 min)*
+**7. Montrer la PR créée** *(3-4 min)*
 
 Ouvrir la PR dans le navigateur : diff `UpdateTrigger.java`, tests WireMock, description avec `closes:` et findings du reviewer en inline comments.
 
@@ -267,13 +263,18 @@ Open in the browser:
 
 > "The Notion plugin already exists, but it's missing something: a trigger. The issue was written by a human with everything needed to code without guessing."
 
-Show the skill and agent source files in the terminal (`cat` or editor):
-- `skills/sources/kestra-plugin-plan/SKILL.md` — Phase 1 skill: read the issue, generate and post the plan
-- `skills/sources/kestra-plugin-issue/SKILL.md` — Phase 2 skill: approval gate, orchestrates the full chain
-- `agents/sources/kestra-plugin-developer.md` — agent that implements, tests, and opens the PR
-- `agents/sources/kestra-plugin-code-reviewer.md` — agent that reviews the diff and returns a verdict
+**2. Run `/kestra-plugin-plan`** *(3-4 min live)*
 
-> "Everything you're about to see running is Markdown. These files are the squad's operational manual."
+```
+/kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
+```
+
+Show the posted comment on GitHub in the browser.
+
+**3. Show the plan skill** *(while it runs)*
+
+Open `skills/sources/kestra-plugin-plan/SKILL.md` in the terminal:
+> "The skill reads the issue, generates a structured plan — Design, Tasks, Edge Cases, Docs Impact — and posts it directly as a GitHub comment. Everything you're about to see running is Markdown. These files are the squad's operational manual."
 
 Skill best practices respected:
 - All under 500 lines
@@ -292,41 +293,32 @@ We iterated a lot:
 
 `superpowers` is generic — this PR is Kestra-domain-specific. What `superpowers` gives you: 14 general skills (TDD cycles, plan/code/verify phases, parallel subagents, worktree isolation). Works for any project.
 
-**2. Run `/kestra-plugin-plan`** *(3-4 min live)*
-
-```
-/kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
-```
-
-While it runs, point to `kestra-plugin-plan/SKILL.md` open alongside:
-> "The skill reads the issue, generates a structured plan — Design, Tasks, Edge Cases, Docs Impact — and posts it directly as a GitHub comment."
-
-Show the posted comment on GitHub in the browser.
-
-**3. Approval gate** *(1 min)*
+**4. Approval gate** *(1 min)*
 
 Comment `/plan-approved` on the issue live.
 
 > "This is the human checkpoint. The workflow cannot continue without this exact comment, posted by a kestra-io org member. This is the guardrail — not a 'yes' button, a deliberate act."
 
-**4. Run `/kestra-plugin-issue`** *(8-15 min — narrate while waiting)*
+**5. Run `/kestra-plugin-issue`** *(8-15 min — narrate while waiting)*
 
 ```
 /kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
 ```
 
-While the developer agent runs, show `kestra-plugin-issue/SKILL.md` and narrate the chain:
+**6. Show the issue skill and agents** *(while it runs)*
+
+Open `skills/sources/kestra-plugin-issue/SKILL.md` and narrate the chain:
 - The skill verifies `/plan-approved` and org membership (security gate)
 - It classifies complexity: here **Standard** (auth token → QA required)
-- It spawns the `kestra-plugin-developer` agent (→ show `kestra-plugin-developer.md`): full batch implementation, Gradle tests, PR
-- Then the `kestra-plugin-code-reviewer` agent (→ show `kestra-plugin-code-reviewer.md`): reviews the full diff, returns APPROVE / REQUEST CHANGES / BLOCK
+- It spawns the `kestra-plugin-developer` agent (→ show `agents/sources/kestra-plugin-developer.md`): full batch implementation, Gradle tests, PR
+- Then the `kestra-plugin-code-reviewer` agent (→ show `agents/sources/kestra-plugin-code-reviewer.md`): reviews the full diff, returns APPROVE / REQUEST CHANGES / BLOCK
 - Then the `/kestra-plugin-qa` skill: end-to-end browser test on Kestra EE
 - Subagents (sequential, `Agent` tool) vs Agent Team (parallel, `/kestra-plugin-issues`)
 - During QA, Claude Code uses Kestra's remote and public MCPs for plugins, blueprints and docs to create realistic flows
 - We didn't create a Claude Code plugin so as not to lock into this harness and to leave the option of using the skills & agents in Codex or OpenCode
 - Additional guardrails are baked into the skills & agents as belt-and-suspenders safety measures
 
-**5. Show the created PR** *(3-4 min)*
+**7. Show the created PR** *(3-4 min)*
 
 Open the PR in the browser: `UpdateTrigger.java` diff, WireMock tests, description with `closes:` and reviewer inline comments.
 
