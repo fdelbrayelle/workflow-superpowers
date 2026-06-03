@@ -200,6 +200,23 @@ Montrer les fichiers sources des skills et agents dans le terminal (`cat` ou éd
 
 > "Tout ce que vous voyez tourner ensuite, c'est du Markdown. Ces fichiers, c'est le manuel opérationnel de la squad."
 
+Bonnes pratiques des skills respectées :
+- Tous sous 500 lignes
+- Workflows séquentiels clairs : chaque skill a des étapes numérotées avec des conditions de succès/échec définies
+- Branchements conditionnels explicites : OSS vs EE, plan-approved ou non, QA PASS/FAIL, review APPROVE/BLOCK — tous les points de décision sont explicites
+- Boucles de feedback : QA fail → fix développeur → retry ; cycle de review avec garde à 5 itérations
+- Templates concrets : rapport Markdown avec structure exacte, blocs de commandes bash, template de plan
+- Valeurs par défaut sensées : répertoire plugins `~/dev/plugins`, messages d'abandon clairs
+- Pas de packages supposés : agent-browser a une note d'installation ; curl, docker, rtk supposés standards dans l'environnement cible
+- Pas de secrets : section guardrails + hook PreToolUse dans le skill QA
+- Bonnes descriptions : spécifiques, orientées action, avec exemples d'arguments
+
+On a beaucoup itéré :
+- Claude Code a généré nos skills & agents de manière itérative lors de sessions dédiées
+- Les skills & agents ont été testés au combat dans des sessions séparées et améliorés après feedback
+
+`superpowers` est générique — cette PR est spécifique au domaine Kestra. Ce que `superpowers` apporte : 14 skills généraux (cycles TDD, phases plan/code/vérification, sous-agents parallèles, isolation par worktree). Fonctionne pour tout projet.
+
 **2. Lancer `/kestra-plugin-plan`** *(3-4 min live)*
 
 ```
@@ -230,6 +247,9 @@ Pendant que le developer agent tourne, montrer `kestra-plugin-issue/SKILL.md` et
 - Puis l'agent `kestra-plugin-code-reviewer` (→ montrer `kestra-plugin-code-reviewer.md`) : review du diff complet, verdict APPROVE / REQUEST CHANGES / BLOCK
 - Puis le skill `/kestra-plugin-qa` : browser-test end-to-end sur Kestra EE
 - Distinction subagents (séquentiel, `Agent` tool) vs Agent Team (parallèle, `/kestra-plugin-issues`)
+- Pendant la QA, Claude Code utilise les MCPs remote et publics de Kestra pour les plugins, les blueprints et la doc pour créer des flows réalistes
+- On n'a pas fait de plugin Claude Code pour ne pas s'enfermer dans ce harness et laisser la possibilité d'utiliser les skills & agents dans Codex ou OpenCode
+- Des guardrails sont ajoutés en complément dans les skills & agents pour être casque, ceinture, bretelles
 
 **5. Montrer la PR créée** *(3-4 min)*
 
@@ -254,6 +274,23 @@ Show the skill and agent source files in the terminal (`cat` or editor):
 - `agents/sources/kestra-plugin-code-reviewer.md` — agent that reviews the diff and returns a verdict
 
 > "Everything you're about to see running is Markdown. These files are the squad's operational manual."
+
+Skill best practices respected:
+- All under 500 lines
+- Clear sequential workflows: each skill has explicit numbered steps with defined success/failure conditions
+- Conditional branching: OSS vs EE, plan-approved or not, PASS/FAIL QA, APPROVE/BLOCK review — all decision points are explicit
+- Feedback loops: QA fail → developer fix → retry; review cycle with 5-cycle guard
+- Concrete examples: report template with exact markdown structure, bash command blocks, plan template
+- Defaults provided: plugins dir defaults to ~/dev/plugins, sensible abort messages
+- No assumed packages: agent-browser has an install note; all other tools (curl, docker, rtk) are standard in the target environment
+- No secrets: guardrails section + PreToolUse hook enforcement baked into the QA skill
+- Good descriptions: specific, action-oriented, include argument hints
+
+We iterated a lot:
+- Claude Code generated our skills & agents iteratively in dedicated sessions
+- The skills & agents were battle-tested in separate sessions and improved once we got feedback
+
+`superpowers` is generic — this PR is Kestra-domain-specific. What `superpowers` gives you: 14 general skills (TDD cycles, plan/code/verify phases, parallel subagents, worktree isolation). Works for any project.
 
 **2. Run `/kestra-plugin-plan`** *(3-4 min live)*
 
@@ -285,6 +322,9 @@ While the developer agent runs, show `kestra-plugin-issue/SKILL.md` and narrate 
 - Then the `kestra-plugin-code-reviewer` agent (→ show `kestra-plugin-code-reviewer.md`): reviews the full diff, returns APPROVE / REQUEST CHANGES / BLOCK
 - Then the `/kestra-plugin-qa` skill: end-to-end browser test on Kestra EE
 - Subagents (sequential, `Agent` tool) vs Agent Team (parallel, `/kestra-plugin-issues`)
+- During QA, Claude Code uses Kestra's remote and public MCPs for plugins, blueprints and docs to create realistic flows
+- We didn't create a Claude Code plugin so as not to lock into this harness and to leave the option of using the skills & agents in Codex or OpenCode
+- Additional guardrails are baked into the skills & agents as belt-and-suspenders safety measures
 
 **5. Show the created PR** *(3-4 min)*
 
