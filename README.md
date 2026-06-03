@@ -194,7 +194,9 @@
 
 ### 🇫🇷 Déroulé
 
-**1. 🧑‍💻 Montrer le contexte** *(2 min)*
+> 🧑‍💻 = étape où le développeur a une action dans le workflow de développement agentique
+
+**1. Montrer le contexte** *(2 min)*
 
 Ouvrir dans le navigateur :
 - [kestra.io/plugins/plugin-notion](https://kestra.io/plugins/plugin-notion) — montrer les tasks existantes (`Create`, `Read`, `Update`, `Archive`) et l'absence de trigger
@@ -210,7 +212,7 @@ Ouvrir dans le navigateur :
 
 Montrer le commentaire posté sur GitHub dans le navigateur.
 
-**3. 🧑‍💻 Montrer le skill plan** *(pendant l'exécution)*
+**3. Montrer le skill plan** *(pendant l'exécution)*
 
 Ouvrir `skills/sources/kestra-plugin-plan/SKILL.md` dans le terminal :
 > "Le skill lit l'issue, génère un plan structuré — Design, Tasks, Edge Cases, Docs Impact — et le poste directement en commentaire GitHub. Tout ce que vous voyez tourner, c'est du Markdown. Ces fichiers, c'est le manuel opérationnel de la squad."
@@ -244,7 +246,7 @@ Commenter `/plan-approved` sur l'issue en direct.
 /kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
 ```
 
-**6. 🧑‍💻 Montrer le skill issue et les agents** *(pendant l'exécution)*
+**6. Montrer le skill issue et les agents** *(pendant l'exécution)*
 
 Ouvrir `skills/sources/kestra-plugin-issue/SKILL.md` et narrer la chaîne :
 - Le skill vérifie le `/plan-approved` et l'appartenance à l'org (gate de sécurité)
@@ -258,7 +260,7 @@ Ouvrir `skills/sources/kestra-plugin-issue/SKILL.md` et narrer la chaîne :
 - On n'a pas fait de plugin Claude Code pour ne pas s'enfermer dans ce harness et laisser la possibilité d'utiliser les skills & agents dans Codex ou OpenCode
 - Des guardrails sont ajoutés en complément dans les skills & agents pour être casque, ceinture, bretelles
 
-**7. 🧑‍💻 Montrer la PR créée** *(3-4 min)*
+**7. Montrer la PR créée** *(3-4 min)*
 
 Ouvrir la PR dans le navigateur : diff `UpdateTrigger.java`, tests WireMock, description avec `closes:` et findings du reviewer en inline comments.
 
@@ -274,7 +276,9 @@ Un membre de la squad merge la PR et release le plugin via [Plugins Devtools](ht
 
 ### 🇬🇧 Walkthrough
 
-**1. 🧑‍💻 Show the context** *(2 min)*
+> 🧑‍💻 = step where the developer has an action in the agentic development workflow
+
+**1. Show the context** *(2 min)*
 
 Open in the browser:
 - [kestra.io/plugins/plugin-notion](https://kestra.io/plugins/plugin-notion) — show the existing tasks (`Create`, `Read`, `Update`, `Archive`) and the absence of a trigger
@@ -290,7 +294,7 @@ Open in the browser:
 
 Show the posted comment on GitHub in the browser.
 
-**3. 🧑‍💻 Show the plan skill** *(while it runs)*
+**3. Show the plan skill** *(while it runs)*
 
 Open `skills/sources/kestra-plugin-plan/SKILL.md` in the terminal:
 > "The skill reads the issue, generates a structured plan — Design, Tasks, Edge Cases, Docs Impact — and posts it directly as a GitHub comment. Everything you're about to see running is Markdown. These files are the squad's operational manual."
@@ -324,7 +328,7 @@ Comment `/plan-approved` on the issue live.
 /kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
 ```
 
-**6. 🧑‍💻 Show the issue skill and agents** *(while it runs)*
+**6. Show the issue skill and agents** *(while it runs)*
 
 Open `skills/sources/kestra-plugin-issue/SKILL.md` and narrate the chain:
 - The skill verifies `/plan-approved` and org membership (security gate)
@@ -338,7 +342,7 @@ Open `skills/sources/kestra-plugin-issue/SKILL.md` and narrate the chain:
 - We didn't create a Claude Code plugin so as not to lock into this harness and to leave the option of using the skills & agents in Codex or OpenCode
 - Additional guardrails are baked into the skills & agents as belt-and-suspenders safety measures
 
-**7. 🧑‍💻 Show the created PR** *(3-4 min)*
+**7. Show the created PR** *(3-4 min)*
 
 Open the PR in the browser: `UpdateTrigger.java` diff, WireMock tests, description with `closes:` and reviewer inline comments.
 
