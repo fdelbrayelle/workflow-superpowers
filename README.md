@@ -285,7 +285,6 @@ While the developer agent runs, show `kestra-plugin-issue/SKILL.md` and narrate 
 - Then the `kestra-plugin-code-reviewer` agent (→ show `kestra-plugin-code-reviewer.md`): reviews the full diff, returns APPROVE / REQUEST CHANGES / BLOCK
 - Then the `/kestra-plugin-qa` skill: end-to-end browser test on Kestra EE
 - Subagents (sequential, `Agent` tool) vs Agent Team (parallel, `/kestra-plugin-issues`)
-- Subagents (sequential) vs Agent Team (parallel, `/kestra-plugin-issues`)
 
 **5. Show the created PR** *(3-4 min)*
 
@@ -364,7 +363,7 @@ Open the PR in the browser: `UpdateTrigger.java` diff, WireMock tests, descripti
 - Tokens saving (-35%)
 - Use Plugins Devtools
 - Support more complex QA
-- Go to the next level (L4b)
+- Go to the next levels (L4b - L5a)
 
 > 🇫🇷 Le coût dominant, c'est la répétition du contexte à chaque tour, pas le code généré. En lisant moins de fichiers complets, en compressant le contexte plus tôt, et en allégeant ou sautant les étapes optionnelles comme le reviewer ou la QA browser pour les issues simples, on peut baisser de 35 % le coût d'une session. C'est ce que j'ai fait dans une PR dédiée en préparant cette conférence. Utiliser nos Plugins Devtools notamment pour utiliser les scripts via l'outil Bash de Claude Code pour lancer Kestra par exemple. Nous pourrions imaginer une QA pour plugins plus complexes nécessitant par exemple un compte. Nous pouvons aller plus loin et il y a des étapes pour ça : GitHub action Claude Code, détection de labels GitHub par les agents, release par un agent, etc. Mais cela nécessite des tests, du temps et des garde-fous notamment en termes de sécurité. Le futur de Kestra s'écrit avec l'IA, et il s'écrit maintenant !
 
