@@ -249,7 +249,7 @@ Ouvrir `skills/sources/kestra-plugin-plan/SKILL.md` dans le terminal :
 > "Le skill lit l'issue, génère un plan structuré — Design, Tasks, Edge Cases, Docs Impact — et le poste directement en commentaire GitHub. Tout ce que vous voyez tourner, c'est du Markdown. Ces fichiers, c'est le manuel opérationnel de la squad."
 
 Bonnes pratiques des skills respectées :
-- Tous sous 500 lignes
+- Tous moins de 500 lignes
 - Workflows séquentiels clairs : chaque skill a des étapes numérotées avec des conditions de succès/échec définies
 - Branchements conditionnels explicites : OSS vs EE, plan-approved ou non, QA PASS/FAIL, review APPROVE/BLOCK — tous les points de décision sont explicites
 - Boucles de feedback : QA fail → fix développeur → retry ; cycle de review avec garde à 5 itérations
@@ -295,11 +295,11 @@ Ouvrir `skills/sources/kestra-plugin-issue/SKILL.md` et narrer la chaîne :
 
 Ouvrir la PR dans le navigateur : diff `UpdateTrigger.java`, tests WireMock, description avec `closes:` et findings du reviewer en inline comments.
 
-**8. 🧑‍💻 Révision par la squad `kestra-io/plugins`** *(sur GitHub)*
+**8. 🧑‍💻 Révision par la squad `kestra-io/plugins`** *(sur GitHub — 5-10 min)*
 
 Un développeur de la squad `kestra-io/plugins` review la PR sur GitHub : lit le diff, les tests, la description et les inline comments du reviewer IA.
 
-**9. 🧑‍💻 Release du plugin**
+**9. 🧑‍💻 Release du plugin** *(~5 min)*
 
 Un membre de la squad merge la PR et release le plugin via [Plugins Devtools](https://github.com/kestra-io/plugins-devtools).
 
@@ -377,11 +377,11 @@ Open `skills/sources/kestra-plugin-issue/SKILL.md` and narrate the chain:
 
 Open the PR in the browser: `UpdateTrigger.java` diff, WireMock tests, description with `closes:` and reviewer inline comments.
 
-**8. 🧑‍💻 Review by the `kestra-io/plugins` squad** *(on GitHub)*
+**8. 🧑‍💻 Review by the `kestra-io/plugins` squad** *(on GitHub — 5-10 min)*
 
 A developer from the `kestra-io/plugins` squad reviews the PR on GitHub: reads the diff, tests, description, and inline comments from the AI reviewer.
 
-**9. 🧑‍💻 Plugin release**
+**9. 🧑‍💻 Plugin release** *(~5 min)*
 
 A squad member merges the PR and releases the plugin via [Plugins Devtools](https://github.com/kestra-io/plugins-devtools).
 
