@@ -227,7 +227,7 @@
 
 > 🧑‍💻 = étape où le développeur a une action dans le workflow de développement agentique
 
-**1. Montrer le contexte** *(2 min)*
+**1. 🧑‍💻 Définir le besoin métier** *(2 min)*
 
 Ouvrir dans le navigateur :
 - [kestra.io/plugins/plugin-notion](https://kestra.io/plugins/plugin-notion) — montrer les tasks existantes (`Create`, `Read`, `Update`, `Archive`) et l'absence de trigger
@@ -309,7 +309,7 @@ Un membre de la squad merge la PR et release le plugin via [Plugins Devtools](ht
 
 > 🧑‍💻 = step where the developer has an action in the agentic development workflow
 
-**1. Show the context** *(2 min)*
+**1. 🧑‍💻 Define the business need** *(2 min)*
 
 Open in the browser:
 - [kestra.io/plugins/plugin-notion](https://kestra.io/plugins/plugin-notion) — show the existing tasks (`Create`, `Read`, `Update`, `Archive`) and the absence of a trigger
