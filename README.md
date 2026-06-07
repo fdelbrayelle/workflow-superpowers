@@ -26,7 +26,7 @@
 - [Slide 15 — « Talk is cheap. Show me the code. »](#slide-15--talk-is-cheap-show-me-the-code-)
 - [Slide 16 — « Code is cheap. Show me the talk? »](#slide-16--code-is-cheap-show-me-the-talk-)
 - [🎬 Demo Notes](#-demo-notes)
-- [Slide 17 — 3000 lines of markdown](#slide-17--3000-lines-of-markdown)
+- [Slide 17 — 1500 lines of markdown](#slide-17--1500-lines-of-markdown)
 - [Slide 18 — Product/Software Engineer in the loop](#slide-18--productsoftware-engineer-in-the-loop)
 - [Slide 19 — AI Maturity Level (post-demo)](#slide-19--ai-maturity-level-post-demo)
 - [Slide 20 — AI Maturity Level (→ L4a highlighted)](#slide-20--ai-maturity-level--l4a-highlighted)
@@ -387,13 +387,13 @@ A squad member merges the PR and releases the plugin via [Plugins Devtools](http
 
 ---
 
-## Slide 17 — 3000 lines of markdown
+## Slide 17 — 1500 lines of markdown
 
 *(callback slide — shown after the demo)*
 
-> 🇫🇷 Et voilà pour la démo ! Le plugin est généré, testé, et il fonctionne parfaitement. Finalement, une grande partie de ce que fait la squad Plugins est automatisable et peut être réduite à 3 000 lignes de Markdown sous forme de skills et d'agents. Ces fichiers markdown, c'est le manuel opérationnel de notre Squad, découpé en expertises précises que les agents vont lire et appliquer à la lettre.
+> 🇫🇷 Et voilà pour la démo ! Le plugin est généré, testé, et il fonctionne parfaitement. Finalement, une grande partie de ce que fait la squad Plugins est automatisable et peut être réduite à environ 1500 lignes de Markdown sous forme de skills et d'agents (pour la version 1 issue pas n issues). Ces fichiers markdown, c'est le manuel opérationnel de notre Squad, découpé en expertises précises que les agents vont lire et appliquer à la lettre.
 
-> 🇬🇧 And that's the demo! The plugin is generated, tested, and it works perfectly. Ultimately, a large part of what the Plugins squad does is automatable and can be reduced to 3,000 lines of Markdown in the form of skills and agents. These markdown files are our squad's operational manual, broken down into precise areas of expertise that agents will read and apply to the letter.
+> 🇬🇧 And that's the demo! The plugin is generated, tested, and it works perfectly. Ultimately, a large part of what the Plugins squad does is automatable and can be reduced to approximately 1,500 lines of Markdown in the form of skills and agents (for the single-issue version, not n issues). These markdown files are our squad's operational manual, broken down into precise areas of expertise that agents will read and apply to the letter.
 
 ---
 
@@ -435,15 +435,15 @@ A squad member merges the PR and releases the plugin via [Plugins Devtools](http
 
 | Metric | Value |
 |---|---|
-| Input tokens (team definition) | ~21,500 |
+| Input tokens (team definition) | ~20,000 |
 | Total input tokens | ~340,000 |
 | Total output tokens | ~30,000 |
 | Cost | ~$1.65 (Opus for planning, Sonnet for the rest) |
 | Developer agent + QA share | ~70% of total input tokens |
 
-> 🇫🇷 Les 3000 lignes de markdown coûtent environ 21 500 tokens par session pour une feature ou un bug. Une feature comme celle de la démo coûterait environ 340 000 tokens d'inputs et 30 000 d'outputs. Mais l'architecture même de Claude Code et certaines lectures (du code, du web, de l'issue GitHub) font qu'il y a un palier incompressible. Pour une feature comme celle que je vous ai montrée ça coûte en moyenne 1,65 $ avec Opus pour le plan et Sonnet sur le reste. Avec un plan comme Claude Code Max x20 à 200 $/mois ça ferait environ 120 issues possibles soit environ 6 par jour en travaillant 20 jours par mois ce qui permet déjà d'accélérer la productivité grandement. Mais en réalité ce pricing permet d'exploiter beaucoup plus de tokens car ce n'est pas du pay as you go. Dans notre cas c'est l'agent développeur et le skill de QA qui prennent 70 % du total des tokens en input. Sur le coût on a déjà réussi à gagner près de 1 $ par issue en optimisant via des PRs récentes : passer le plan à l'agent développeur pour éviter une réexploration du code, et plusieurs /compact aux endroits stratégiques pour réduire la context window.
+> 🇫🇷 Les skills et agents coûtent environ 20 000 tokens par session pour une feature ou un bug (environ 6 % du total en input). Une feature comme celle de la démo coûterait environ 340 000 tokens d'inputs et 30 000 d'outputs. Mais l'architecture même de Claude Code et certaines lectures (du code, du web, de l'issue GitHub) font qu'il y a un palier incompressible. Pour une feature comme celle que je vous ai montrée ça coûte en moyenne 1,65 $ avec Opus pour le plan et Sonnet sur le reste. Avec un plan comme Claude Code Max x20 à 200 $/mois ça ferait environ 120 issues possibles soit environ 6 par jour en travaillant 20 jours par mois ce qui permet déjà d'accélérer la productivité grandement. Mais en réalité ce pricing permet d'exploiter beaucoup plus de tokens car ce n'est pas du pay as you go. Dans notre cas c'est l'agent développeur et le skill de QA qui prennent 70 % du total des tokens en input. Sur le coût on a déjà réussi à gagner près de 1 $ par issue en optimisant via des PRs récentes : passer le plan à l'agent développeur pour éviter une réexploration du code, et plusieurs /compact aux endroits stratégiques pour réduire la context window.
 
-> 🇬🇧 The 3,000 lines of markdown cost approximately 21,500 tokens per session for a feature or bug. A feature like the one from the demo would cost approximately 340,000 input tokens and 30,000 output tokens. But the architecture of Claude Code itself and certain file reads (code, web, GitHub issue) mean there's an incompressible baseline. For a feature like the one shown it costs on average $1.65 with Opus for the plan and Sonnet for the rest. With a plan like Claude Code Max x20 at $200/month that would be approximately 120 possible issues — about 6 per day working 20 days a month, which already greatly accelerates productivity. But in reality this pricing allows exploiting many more tokens since it's not pay as you go. In our case it's the developer agent and QA skill that account for 70% of total input tokens. On the cost side, we've already managed to save nearly $1 per issue by optimizing via recent PRs: passing the plan to the developer agent to avoid re-exploring the code, and multiple /compact calls at strategic points to reduce the context window.
+> 🇬🇧 The skills and agents cost approximately 20,000 tokens per session for a feature or bug (approximately 6% of total input tokens). A feature like the one from the demo would cost approximately 340,000 input tokens and 30,000 output tokens. But the architecture of Claude Code itself and certain file reads (code, web, GitHub issue) mean there's an incompressible baseline. For a feature like the one shown it costs on average $1.65 with Opus for the plan and Sonnet for the rest. With a plan like Claude Code Max x20 at $200/month that would be approximately 120 possible issues — about 6 per day working 20 days a month, which already greatly accelerates productivity. But in reality this pricing allows exploiting many more tokens since it's not pay as you go. In our case it's the developer agent and QA skill that account for 70% of total input tokens. On the cost side, we've already managed to save nearly $1 per issue by optimizing via recent PRs: passing the plan to the developer agent to avoid re-exploring the code, and multiple /compact calls at strategic points to reduce the context window.
 
 ---
 
