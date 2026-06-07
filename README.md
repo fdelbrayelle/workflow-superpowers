@@ -235,14 +235,14 @@ sudo apt install asciinema
 brew install asciinema
 ```
 
-Then replay:
+Then replay (`-s 3` plays at 3× speed, `-i 1.5` caps idle pauses to 1.5 s):
 
 ```bash
-# Plan generation
-asciinema play plan.cast
+# Plan generation (~2 min)
+asciinema play -s 3 -i 1.5 plan.cast
 
-# Full implementation (developer + reviewer + QA)
-asciinema play implementation.cast
+# Full implementation (developer + reviewer + QA) (~27 min)
+asciinema play -s 3 -i 1.5 implementation.cast
 ```
 
 ---
