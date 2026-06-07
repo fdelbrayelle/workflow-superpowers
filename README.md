@@ -3,7 +3,7 @@
 > Slides from a talk by **François Delbrayelle**, Lead Software Engineer @ Kestra
 > — [github.com/fdelbrayelle](https://github.com/fdelbrayelle) · [linkedin.com/in/fdelbrayelle](https://linkedin.com/in/fdelbrayelle)
 >
-> 📥 [Download slides (PDF)](slides.pdf)
+> 📥 [Download slides (PDF)](slides.pdf) · 🎬 [See the demo](#-demo-notes)
 
 ---
 
