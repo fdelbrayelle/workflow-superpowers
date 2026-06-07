@@ -269,7 +269,7 @@ On a beaucoup itéré :
 
 Nous avons choisi les skills & agents plutôt que d'avoir un AGENTS.md à maintenir sur environ 200 repositories avec les mêmes guidelines et requests partout.
 
-Il n'y a pas (ou presque pas) de prompt engineering ici — c'est plutôt de la context engineering.
+Il n'y a (presque) pas de prompt engineering ici — c'est plutôt du context engineering.
 
 **4. 🧑‍💻 Valider le plan** *(1 min)*
 
