@@ -243,6 +243,8 @@ Ouvrir dans le navigateur :
 
 Montrer le commentaire posté sur GitHub dans le navigateur.
 
+> "Le plan est généré en premier et posté en commentaire sur l'issue pour être documenté — on peut ensuite vider ou compacter le contexte si on veut, ou un autre membre de la squad peut prendre l'implémentation."
+
 **3. Montrer le skill plan** *(pendant l'exécution)*
 
 Ouvrir `skills/sources/kestra-plugin-plan/SKILL.md` dans le terminal :
@@ -264,6 +266,10 @@ On a beaucoup itéré :
 - Les skills & agents ont été testés au combat dans des sessions séparées et améliorés après feedback
 
 `superpowers` est trop générique pour notre besoin Kestra — c'est pourquoi on a écrit nos propres skills & agents plutôt que de s'y limiter. Ce que `superpowers` apporte quand même : 14 skills généraux (cycles TDD, phases plan/code/vérification, sous-agents parallèles, isolation par worktree).
+
+Nous avons choisi les skills & agents plutôt que d'avoir un AGENTS.md à maintenir sur environ 200 repositories avec les mêmes guidelines et requests partout.
+
+Il n'y a pas (ou presque pas) de prompt engineering ici — c'est plutôt de la context engineering.
 
 **4. 🧑‍💻 Valider le plan** *(1 min)*
 
@@ -290,6 +296,7 @@ Ouvrir `skills/sources/kestra-plugin-issue/SKILL.md` et narrer la chaîne :
 - Pendant la QA, Claude Code utilise les MCPs remote et publics de Kestra pour les plugins, les blueprints et la doc pour créer des flows réalistes
 - On n'a pas fait de plugin Claude Code pour ne pas s'enfermer dans ce harness et laisser la possibilité d'utiliser les skills & agents dans Codex ou OpenCode
 - Des guardrails sont ajoutés en complément dans les skills & agents pour être casque, ceinture, bretelles
+- Il est possible d'invoquer certains skills & agents directement, comme le skill de QA ou l'agent code reviewer
 
 **7. Montrer la PR créée** *(3-4 min)*
 
@@ -325,6 +332,8 @@ Open in the browser:
 
 Show the posted comment on GitHub in the browser.
 
+> "The plan is generated first and posted as a comment on the issue so it's documented — we can then clear or compact the context if we want, or another squad member can pick up the implementation."
+
 **3. Show the plan skill** *(while it runs)*
 
 Open `skills/sources/kestra-plugin-plan/SKILL.md` in the terminal:
@@ -346,6 +355,10 @@ We iterated a lot:
 - The skills & agents were battle-tested in separate sessions and improved once we got feedback
 
 `superpowers` is too generic for our Kestra-specific needs — that's why we wrote our own skills & agents instead of relying on it. What `superpowers` still brings: 14 general skills (TDD cycles, plan/code/verify phases, parallel subagents, worktree isolation).
+
+We chose skills & agents over having AGENTS.md to maintain on about 200 repositories with the same guidelines and requests everywhere.
+
+There's no prompt engineering here or almost none — it's more about context engineering.
 
 **4. 🧑‍💻 Approval gate** *(1 min)*
 
@@ -372,6 +385,7 @@ Open `skills/sources/kestra-plugin-issue/SKILL.md` and narrate the chain:
 - During QA, Claude Code uses Kestra's remote and public MCPs for plugins, blueprints and docs to create realistic flows
 - We didn't create a Claude Code plugin so as not to lock into this harness and to leave the option of using the skills & agents in Codex or OpenCode
 - Additional guardrails are baked into the skills & agents as belt-and-suspenders safety measures
+- It's possible to invoke some of the skills & agents directly, like the QA skill or the code reviewer agent
 
 **7. Show the created PR** *(3-4 min)*
 
