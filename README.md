@@ -30,7 +30,7 @@
 - [Slide 18 — Product/Software Engineer in the loop](#slide-18--productsoftware-engineer-in-the-loop)
 - [Slide 19 — AI Maturity Level (post-demo)](#slide-19--ai-maturity-level-post-demo)
 - [Slide 20 — AI Maturity Level (→ L4a highlighted)](#slide-20--ai-maturity-level--l4a-highlighted)
-- [Slide 21 — How much does 1 session cost?](#slide-21--how-much-does-1-session-cost)
+- [Slide 21 — How much does 1 session/issue cost?](#slide-21--how-much-does-1-sessionissue-cost)
 - [Slide 22 — How could we improve?](#slide-22--how-could-we-improve)
 - [Slide 23 — Thank you! Any Questions?](#slide-23--thank-you-any-questions)
 
@@ -172,7 +172,7 @@
 ## Slide 13 — Plugins
 
 - 10% most used plugins by 90% of the users
-- **1400+ plugins** available at [kestra.io/plugins](https://kestra.io/plugins)
+- **1500+ plugins** available at [kestra.io/plugins](https://kestra.io/plugins)
 - Everything is a plugin
 
 > 🇫🇷 10 % des plugins le sont par 90 % des utilisateurs. Avec près de 1500 plugins, Kestra est une plateforme sans limites. Tout est plugin dans Kestra : une tâche, un trigger, un task runner, un secret manager, un storage provider, etc. Et si le plugin dont vous avez besoin n'existe pas encore, on va le créer ensemble... en quelques minutes.
@@ -203,21 +203,21 @@
 
 *— Linus Torvalds*
 
-> 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai besoin métier : Ben, Product Manager dans une autre squad, voudrait lancer certaines actions dans un flow Kestra dès qu'une page Notion est modifiée. Aujourd'hui, notre plugin Notion permet d'envoyer des données, mais pas d'écouter ce qu'il s'y passe — ce trigger n'existe pas encore. Voyons ensemble la spéc pour ce trigger et confions le sujet à notre Plugins Agent Team du plan à la QA ! (ref: [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50))
+> 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai cas d'usage lié à la gouvernance des données et à la conformité réglementaire. Certaines équipes manipulent des jeux de données contenant des données personnelles, mais elles doivent impérativement respecter le RGPD (notamment l'article 25 sur la protection des données dès la conception). Le problème à résoudre : Aujourd'hui, notre plugin plugin-datagen permet de générer des fausses données à la volée, mais il lui manque une fonctionnalité essentielle : pouvoir anonymiser ou masquer à la demande un flux de données existant contenant des informations sensibles (PII). Cette feature d'anonymisation n'existe pas encore. Voyons ensemble la spécification technique pour cette feature d'anonymisation et confions l'intégralité du sujet à notre Plugins Agent Team : du plan de conception jusqu'à la QA ! (ref: [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
 
-> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real business need: Ben, Product Manager in another squad, wants to trigger certain actions in a Kestra flow whenever a Notion page is modified. Today, our Notion plugin can send data, but can't listen to what's happening there — this trigger doesn't exist yet. Let's look at the spec for this trigger together and hand the subject to our Plugins Agent Team from planning to QA! (ref: [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50))
+> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real use case related to data governance and regulatory compliance. Some teams work with datasets containing personal data, but must strictly comply with GDPR (in particular Article 25 on data protection by design). The problem to solve: Today, our plugin-datagen plugin can generate fake data on the fly, but it's missing an essential feature: the ability to anonymize or mask on demand an existing data stream containing sensitive information (PII). This anonymization feature doesn't exist yet. Let's look at the technical specification together for this anonymization feature and hand off the entire subject to our Plugins Agent Team: from the design plan all the way to QA! (ref: [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
 
-*Demo resources: [Notion plugin docs](https://kestra.io/plugins/plugin-notion/notion-pages) · [GitHub issue #50](https://github.com/kestra-io/plugin-notion/issues/50) · asciinema backup recording*
+*Demo resources: [plugin-datagen docs](https://kestra.io/plugins/plugin-datagen) · [GitHub issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) · asciinema backup recording*
 
 ---
 
 ## Slide 16 — « Code is cheap. Show me the talk? »
 
-> 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai besoin métier : Ben, Product Manager dans une autre squad, voudrait lancer certaines actions dans un flow Kestra dès qu'une page Notion est modifiée. Aujourd'hui, notre plugin Notion permet d'envoyer des données, mais pas d'écouter ce qu'il s'y passe — ce trigger n'existe pas encore. Voyons ensemble la spéc pour ce trigger et confions le sujet à notre Plugins Agent Team du plan à la QA ! (ref: [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50))
+> 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai cas d'usage lié à la gouvernance des données et à la conformité réglementaire. Certaines équipes manipulent des jeux de données contenant des données personnelles, mais elles doivent impérativement respecter le RGPD (notamment l'article 25 sur la protection des données dès la conception). Le problème à résoudre : Aujourd'hui, notre plugin plugin-datagen permet de générer des fausses données à la volée, mais il lui manque une fonctionnalité essentielle : pouvoir anonymiser ou masquer à la demande un flux de données existant contenant des informations sensibles (PII). Cette feature d'anonymisation n'existe pas encore. Voyons ensemble la spécification technique pour cette feature d'anonymisation et confions l'intégralité du sujet à notre Plugins Agent Team : du plan de conception jusqu'à la QA ! (ref: [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
 
-> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real business need: Ben, Product Manager in another squad, wants to trigger certain actions in a Kestra flow whenever a Notion page is modified. Today, our Notion plugin can send data, but can't listen to what's happening there — this trigger doesn't exist yet. Let's look at the spec for this trigger together and hand the subject to our Plugins Agent Team from planning to QA! (ref: [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50))
+> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real use case related to data governance and regulatory compliance. Some teams work with datasets containing personal data, but must strictly comply with GDPR (in particular Article 25 on data protection by design). The problem to solve: Today, our plugin-datagen plugin can generate fake data on the fly, but it's missing an essential feature: the ability to anonymize or mask on demand an existing data stream containing sensitive information (PII). This anonymization feature doesn't exist yet. Let's look at the technical specification together for this anonymization feature and hand off the entire subject to our Plugins Agent Team: from the design plan all the way to QA! (ref: [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
 
-*Demo resources: [Notion plugin docs](https://kestra.io/plugins/plugin-notion/notion-pages) · [GitHub issue #50](https://github.com/kestra-io/plugin-notion/issues/50) · asciinema backup recording*
+*Demo resources: [plugin-datagen docs](https://kestra.io/plugins/plugin-datagen) · [GitHub issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) · asciinema backup recording*
 
 ---
 
@@ -230,15 +230,15 @@
 **1. 🧑‍💻 Définir le besoin métier** *(2 min)*
 
 Ouvrir dans le navigateur :
-- [kestra.io/plugins/plugin-notion](https://kestra.io/plugins/plugin-notion) — montrer les tasks existantes (`Create`, `Read`, `Update`, `Archive`) et l'absence de trigger
-- [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50) — lire le besoin métier, les acceptance criteria et les exemples YAML
+- [kestra.io/plugins/plugin-datagen](https://kestra.io/plugins/plugin-datagen) — montrer les tasks existantes et l'absence de feature d'anonymisation
+- [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) — lire le besoin métier, les acceptance criteria et les exemples YAML
 
-> "Le plugin Notion existe déjà, mais il lui manque quelque chose : un trigger. L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner."
+> "Le plugin plugin-datagen existe déjà, mais il lui manque quelque chose : une feature d'anonymisation de données personnelles (PII). L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner."
 
 **2. Lancer `/kestra-plugin-plan`** *(3-4 min live)*
 
 ```
-/kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
+/kestra-plugin-plan https://github.com/kestra-io/plugin-datagen/issues/53
 ```
 
 Montrer le commentaire posté sur GitHub dans le navigateur.
@@ -274,7 +274,7 @@ Commenter `/plan-approved` sur l'issue en direct.
 **5. Lancer `/kestra-plugin-issue`** *(8-15 min — narration pendant l'attente)*
 
 ```
-/kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
+/kestra-plugin-issue https://github.com/kestra-io/plugin-datagen/issues/53
 ```
 
 **6. Montrer le skill issue et les agents** *(pendant l'exécution)*
@@ -293,7 +293,7 @@ Ouvrir `skills/sources/kestra-plugin-issue/SKILL.md` et narrer la chaîne :
 
 **7. Montrer la PR créée** *(3-4 min)*
 
-Ouvrir la PR dans le navigateur : diff `UpdateTrigger.java`, tests WireMock, description avec `closes:` et findings du reviewer en inline comments.
+Ouvrir la PR dans le navigateur : diff de la feature d'anonymisation, tests WireMock, description avec `closes:` et findings du reviewer en inline comments.
 
 **8. 🧑‍💻 Révision par la squad `kestra-io/plugins`** *(sur GitHub — ~1 min)*
 
@@ -312,15 +312,15 @@ Un membre de la squad merge la PR et release le plugin via [Plugins Devtools](ht
 **1. 🧑‍💻 Define the business need** *(2 min)*
 
 Open in the browser:
-- [kestra.io/plugins/plugin-notion](https://kestra.io/plugins/plugin-notion) — show the existing tasks (`Create`, `Read`, `Update`, `Archive`) and the absence of a trigger
-- [plugin-notion issue #50](https://github.com/kestra-io/plugin-notion/issues/50) — walk through the business need, acceptance criteria, and YAML examples
+- [kestra.io/plugins/plugin-datagen](https://kestra.io/plugins/plugin-datagen) — show the existing tasks and the absence of an anonymization feature
+- [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) — walk through the business need, acceptance criteria, and YAML examples
 
-> "The Notion plugin already exists, but it's missing something: a trigger. The issue was written by a human with everything needed to code without guessing."
+> "The plugin-datagen plugin already exists, but it's missing something: a PII anonymization feature. The issue was written by a human with everything needed to code without guessing."
 
 **2. Run `/kestra-plugin-plan`** *(3-4 min live)*
 
 ```
-/kestra-plugin-plan https://github.com/kestra-io/plugin-notion/issues/50
+/kestra-plugin-plan https://github.com/kestra-io/plugin-datagen/issues/53
 ```
 
 Show the posted comment on GitHub in the browser.
@@ -356,7 +356,7 @@ Comment `/plan-approved` on the issue live.
 **5. Run `/kestra-plugin-issue`** *(8-15 min — narrate while waiting)*
 
 ```
-/kestra-plugin-issue https://github.com/kestra-io/plugin-notion/issues/50
+/kestra-plugin-issue https://github.com/kestra-io/plugin-datagen/issues/53
 ```
 
 **6. Show the issue skill and agents** *(while it runs)*
@@ -375,7 +375,7 @@ Open `skills/sources/kestra-plugin-issue/SKILL.md` and narrate the chain:
 
 **7. Show the created PR** *(3-4 min)*
 
-Open the PR in the browser: `UpdateTrigger.java` diff, WireMock tests, description with `closes:` and reviewer inline comments.
+Open the PR in the browser: anonymization feature diff, WireMock tests, description with `closes:` and reviewer inline comments.
 
 **8. 🧑‍💻 Review by the `kestra-io/plugins` squad** *(on GitHub — ~1 min)*
 
@@ -391,9 +391,9 @@ A squad member merges the PR and releases the plugin via [Plugins Devtools](http
 
 *(callback slide — shown after the demo)*
 
-> 🇫🇷 Et voilà pour la démo ! Le plugin est généré, testé, et il fonctionne parfaitement. Finalement, une grande partie de ce que fait la squad Plugins est automatisable et peut être réduite à 3 000 lignes de Markdown sous forme de skills et d'agents. Ces fichiers markdown, c'est le manuel opérationnel de notre squad, découpé en expertises précises que les agents vont lire et appliquer à la lettre. Alors oui ça met un peu un coup à l'égo de faire ce constat, mais nous gardons le contrôle sur le plus important : le produit, l'architecture, les résultats, la release et le suivi une fois en production !
+> 🇫🇷 Et voilà pour la démo ! Le plugin est généré, testé, et il fonctionne parfaitement. Finalement, une grande partie de ce que fait la squad Plugins est automatisable et peut être réduite à 3 000 lignes de Markdown sous forme de skills et d'agents. Ces fichiers markdown, c'est le manuel opérationnel de notre Squad, découpé en expertises précises que les agents vont lire et appliquer à la lettre.
 
-> 🇬🇧 And that's the demo! The plugin is generated, tested, and it works perfectly. Ultimately, a large part of what the Plugins squad does is automatable and can be reduced to 3,000 lines of Markdown in the form of skills and agents. These markdown files are our squad's operational manual, broken down into precise areas of expertise that agents will read and apply to the letter. Yes, it's a bit of an ego check to realize this — but we keep control over what matters most: the product, architecture, results, release and monitoring once in production!
+> 🇬🇧 And that's the demo! The plugin is generated, tested, and it works perfectly. Ultimately, a large part of what the Plugins squad does is automatable and can be reduced to 3,000 lines of Markdown in the form of skills and agents. These markdown files are our squad's operational manual, broken down into precise areas of expertise that agents will read and apply to the letter.
 
 ---
 
@@ -404,6 +404,10 @@ A squad member merges the PR and releases the plugin via [Plugins Devtools](http
 3. 🧑‍💻 `/plan-approved`
 4. 🤖 `/kestra-plugin-issue` (developer & reviewer)
 5. 🧑‍💻 reviews, merges and releases
+
+> 🇫🇷 Alors oui ça met un peu un coup à l'égo de faire ce constat mais nous gardons le contrôle sur le plus important : le produit, l'architecture, les résultats, la release et le suivi une fois en production !
+
+> 🇬🇧 Yes, it's a bit of an ego check to realize this — but we keep control over what matters most: the product, architecture, results, release and monitoring once in production!
 
 ---
 
@@ -421,38 +425,38 @@ A squad member merges the PR and releases the plugin via [Plugins Devtools](http
 
 *(same table, with L4a — Supervised Agentic highlighted as the target level)*
 
-> 🇫🇷 C'est ici que le métier de développeur bascule : vous ne tapez plus de code, vous pilotez des compétences numériques expertes et devenez un véritable orchestrateur d'agents qui passe plus de temps sur le product management, l'architecture et les résultats plutôt que sur l'écriture de code pure.
+> 🇫🇷 C'est ici que le métier de développeur bascule : vous ne tapez plus de code, vous devenez un orchestrateur d'agents et de skills qui passe plus de temps sur le product management, l'architecture et les résultats plutôt que sur l'écriture de code pure.
 
-> 🇬🇧 This is where the developer role shifts: you no longer type code, you direct expert digital skills and become a true agent orchestrator who spends more time on product management, architecture and results rather than pure code writing.
+> 🇬🇧 This is where the developer role shifts: you no longer type code, you become an orchestrator of agents and skills who spends more time on product management, architecture and results rather than pure code writing.
 
 ---
 
-## Slide 21 — How much does 1 session cost?
+## Slide 21 — How much does 1 session/issue cost?
 
 | Metric | Value |
 |---|---|
 | Input tokens (team definition) | ~21,500 |
-| Total input tokens | ~555,000 |
-| Total output tokens | ~36,000 |
-| Cost | ~$2.70 (Opus for planning, Sonnet for the rest) |
+| Total input tokens | ~340,000 |
+| Total output tokens | ~30,000 |
+| Cost | ~$1.65 (Opus for planning, Sonnet for the rest) |
 | Developer agent + QA share | ~70% of total input tokens |
 
-> 🇫🇷 Les 3000 lignes de markdown coûtent 21 500 tokens par session pour une feature ou un bug. Une feature comme le trigger Notion coûterait environ 500 000 tokens d'inputs et 36 000 d'outputs. Les outils comme rtk et caveman permettent de réduire drastiquement ces chiffres. Mais l'architecture même de Claude Code et les nombreuses lectures (du code, du web, de l'issue GitHub) font qu'il y a un palier incompressible. Pour une feature comme celle que je vous ai montrée ça coûte en moyenne 2,70 $ avec Opus pour le plan et Sonnet sur le reste. Avec un plan comme Claude Code Max x20 à 200 $/mois ça ferait 74 sessions soit environ 3,5 par jour en travaillant 20 jours par mois ce qui permet déjà d'accélérer la productivité. Mais en réalité ce pricing permet d'exploiter beaucoup plus de tokens car ce n'est pas du pay as you go. Dans notre cas c'est l'agent développeur et le skill de QA qui prennent 70 % du total des tokens en input.
+> 🇫🇷 Les 3000 lignes de markdown coûtent environ 21 500 tokens par session pour une feature ou un bug. Une feature comme celle de la démo coûterait environ 340 000 tokens d'inputs et 30 000 d'outputs. Mais l'architecture même de Claude Code et certaines lectures (du code, du web, de l'issue GitHub) font qu'il y a un palier incompressible. Pour une feature comme celle que je vous ai montrée ça coûte en moyenne 1,65 $ avec Opus pour le plan et Sonnet sur le reste. Avec un plan comme Claude Code Max x20 à 200 $/mois ça ferait environ 120 issues possibles soit environ 6 par jour en travaillant 20 jours par mois ce qui permet déjà d'accélérer la productivité grandement. Mais en réalité ce pricing permet d'exploiter beaucoup plus de tokens car ce n'est pas du pay as you go. Dans notre cas c'est l'agent développeur et le skill de QA qui prennent 70 % du total des tokens en input. Sur le coût on a déjà réussi à gagner près de 1 $ par issue en optimisant via des PRs récentes : passer le plan à l'agent développeur pour éviter une réexploration du code, et plusieurs /compact aux endroits stratégiques pour réduire la context window.
 
-> 🇬🇧 The 3,000 lines of markdown cost 21,500 tokens per session for a feature or bug. A feature like the Notion trigger would cost approximately 500,000 input tokens and 36,000 output tokens. Tools like rtk and caveman allow drastically reducing these numbers. But the architecture of Claude Code itself and the many file reads (code, web, GitHub issue) mean there's an incompressible baseline. For a feature like the one shown it costs on average $2.70 with Opus for the plan and Sonnet for the rest. With a plan like Claude Code Max x20 at $200/month that would be 74 sessions — about 3.5 per day working 20 days a month, which already accelerates productivity. But in reality this pricing allows exploiting many more tokens since it's not pay as you go. In our case it's the developer agent and QA skill that account for 70% of total input tokens.
+> 🇬🇧 The 3,000 lines of markdown cost approximately 21,500 tokens per session for a feature or bug. A feature like the one from the demo would cost approximately 340,000 input tokens and 30,000 output tokens. But the architecture of Claude Code itself and certain file reads (code, web, GitHub issue) mean there's an incompressible baseline. For a feature like the one shown it costs on average $1.65 with Opus for the plan and Sonnet for the rest. With a plan like Claude Code Max x20 at $200/month that would be approximately 120 possible issues — about 6 per day working 20 days a month, which already greatly accelerates productivity. But in reality this pricing allows exploiting many more tokens since it's not pay as you go. In our case it's the developer agent and QA skill that account for 70% of total input tokens. On the cost side, we've already managed to save nearly $1 per issue by optimizing via recent PRs: passing the plan to the developer agent to avoid re-exploring the code, and multiple /compact calls at strategic points to reduce the context window.
 
 ---
 
 ## Slide 22 — How could we improve?
 
-- Tokens saving (-35%)
-- Use Plugins Devtools
+- Plan refinement loop
 - Support more complex QA
-- Go to the next levels (L4b - L5a)
+- Monitor CI after PR creation
+- Go to the next levels (L4b - L5a)?
 
-> 🇫🇷 Le coût dominant, c'est la répétition du contexte à chaque tour, pas le code généré. En lisant moins de fichiers complets, en compressant le contexte plus tôt, et en allégeant ou sautant les étapes optionnelles comme le reviewer ou la QA browser pour les issues simples, on peut baisser de 35 % le coût d'une session. C'est ce que j'ai fait dans une PR dédiée en préparant cette conférence. Utiliser nos Plugins Devtools notamment pour utiliser les scripts via l'outil Bash de Claude Code pour lancer Kestra par exemple. Nous pourrions imaginer une QA pour plugins plus complexes nécessitant par exemple un compte. Nous pouvons aller plus loin et il y a des étapes pour ça : GitHub action Claude Code, détection de labels GitHub par les agents, release par un agent, etc. Mais cela nécessite des tests, du temps et des garde-fous notamment en termes de sécurité. Le futur de Kestra s'écrit avec l'IA, et il s'écrit maintenant !
+> 🇫🇷 Améliorer la boucle de planification pour éviter un simple /plan-approved. On peut aussi imaginer une QA pour plugins plus complexes nécessitant par exemple un compte. Ensuite, vérifier la CI en temps réel une fois la PR créée. Et bien sûr nous pourrions aller encore plus loin : le niveau L4b « autonome » : faire sauter les blocages humains c'est supprimer le /plan-approved avec une auto-évaluation du plan sur la base de critères solides + capacité de release auto ; le niveau L5a « auto-optimisé » : après chaque session, écrire un JSON de télémétrie + nouveau skill d'auto optimisation des skills & agents (ouvre des PRs sur notre repo qui les contient). Tout bien sûr nécessite des tests, du temps et des garde-fous notamment en termes de sécurité. Le futur de Kestra s'écrit avec l'IA, et il s'écrit maintenant !
 
-> 🇬🇧 The dominant cost is context repetition each turn, not the generated code. By reading fewer full files, compressing context earlier, and lightening or skipping optional steps like the reviewer or browser QA for simple issues, we can reduce session cost by 35%. That's what I did in a dedicated PR while preparing this talk. Using our Plugins Devtools, particularly to use scripts via Claude Code's Bash tool to launch Kestra for example. We could imagine a QA for more complex plugins requiring an account for example. We can go further and there are steps for that: GitHub action Claude Code, agent-driven GitHub label detection, agent-driven releases, etc. But that requires testing, time and guardrails particularly around security. The future of Kestra is being written with AI, and it's being written now!
+> 🇬🇧 Improve the planning loop to avoid a simple /plan-approved. We could also imagine QA for more complex plugins requiring for example an account. Then, verify CI in real time once the PR is created. And of course we could go even further: L4b "autonomous" level — removing human blockers means eliminating /plan-approved with an auto-evaluation of the plan based on solid criteria + auto-release capability; L5a "self-optimizing" level — after each session, write a telemetry JSON + new skill for auto-optimization of skills & agents (opens PRs on our repo containing them). All of this of course requires testing, time and guardrails particularly around security. The future of Kestra is being written with AI, and it's being written now!
 
 ---
 
