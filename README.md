@@ -223,6 +223,30 @@
 
 ## 🎬 Demo Notes
 
+### Replay the demo
+
+Install asciinema first if needed:
+
+```bash
+# Ubuntu
+sudo apt install asciinema
+
+# macOS
+brew install asciinema
+```
+
+Then replay:
+
+```bash
+# Plan generation
+asciinema play plan.cast
+
+# Full implementation (developer + reviewer + QA)
+asciinema play implementation.cast
+```
+
+---
+
 ### 🇫🇷 Déroulé
 
 > 🧑‍💻 = étape où le développeur a une action dans le workflow de développement agentique
