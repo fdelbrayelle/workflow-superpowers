@@ -258,11 +258,14 @@ asciinema play -s 3 -i 1.5 $DEMO_DIR/implementation.cast
 
 **1. 🧑‍💻 Définir le besoin métier** *(2 min)*
 
+Expliquer ce qu'est un plugin Kestra :
+> "Un plugin Kestra, c'est un projet Java hébergé sur GitHub. Il est compilé en shadow JAR et déposé dans un répertoire de plugins utilisé par une instance Kestra. Chaque task ou trigger du plugin est une simple classe Java."
+
 Ouvrir dans le navigateur :
 - [plugin docs](https://kestra.io/plugins/plugin-datagen) — montrer les tasks existantes et l'absence de feature d'anonymisation
 - [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) — lire le besoin métier, les acceptance criteria et les exemples YAML
 
-> "Le plugin existe déjà, mais il lui manque quelque chose : une feature d'anonymisation de données personnelles (PII). L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner."
+> "Le plugin existe déjà, mais il lui manque quelque chose : une feature d'anonymisation de données personnelles (PII). L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner. Et cette issue, on l'a générée avec notre skill `/kestra-plugin-managing-issues`."
 
 **2. Lancer `/kestra-plugin-plan`** *(3-4 min live)*
 
@@ -347,11 +350,14 @@ Un membre de la squad merge la PR et release le plugin via [Plugins Devtools](ht
 
 **1. 🧑‍💻 Define the business need** *(2 min)*
 
+Explain what a Kestra plugin is:
+> "A Kestra plugin is a Java project hosted on GitHub. It is compiled into a shadow JAR and dropped into a plugin directory used by a Kestra instance. Each task or trigger in the plugin is a simple Java class."
+
 Open in the browser:
 - [plugin docs](https://kestra.io/plugins/plugin-datagen) — show the existing tasks and the absence of an anonymization feature
 - [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) — walk through the business need, acceptance criteria, and YAML examples
 
-> "The plugin already exists, but it's missing something: a PII anonymization feature. The issue was written by a human with everything needed to code without guessing."
+> "The plugin already exists, but it's missing something: a PII anonymization feature. The issue was written by a human with everything needed to code without guessing — and this issue was itself generated with our `/kestra-plugin-managing-issues` skill."
 
 **2. Run `/kestra-plugin-plan`** *(3-4 min live)*
 
