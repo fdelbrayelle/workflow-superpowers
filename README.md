@@ -223,6 +223,18 @@
 
 ## 🎬 Demo Notes
 
+### Parameters
+
+> Conference-specific values. To reuse this template for a new event, update the table below then search-and-replace `plugin-datagen` and `issues/53` throughout this section.
+
+| Parameter | Value |
+|---|---|
+| **Conference** | DevLille 2026 |
+| **Demo folder** | `2026_devlille_demo` |
+| **Plugin repo** | [kestra-io/plugin-datagen](https://github.com/kestra-io/plugin-datagen) |
+| **Plugin docs** | [kestra.io/plugins/plugin-datagen](https://kestra.io/plugins/plugin-datagen) |
+| **Issue** | [kestra-io/plugin-datagen#53](https://github.com/kestra-io/plugin-datagen/issues/53) |
+
 ### Replay the demo
 
 Install asciinema first if needed:
