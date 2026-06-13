@@ -238,11 +238,14 @@ brew install asciinema
 Then replay (`-s 3` plays at 3× speed, `-i 1.5` caps idle pauses to 1.5 s):
 
 ```bash
+# Set to the conference folder you want to replay (e.g. 2026_devlille_demo)
+DEMO_DIR=2026_devlille_demo
+
 # Plan generation (~2 min)
-asciinema play -s 3 -i 1.5 plan.cast
+asciinema play -s 3 -i 1.5 $DEMO_DIR/plan.cast
 
 # Full implementation (developer + reviewer + QA) (~27 min)
-asciinema play -s 3 -i 1.5 implementation.cast
+asciinema play -s 3 -i 1.5 $DEMO_DIR/implementation.cast
 ```
 
 ---
