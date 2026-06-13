@@ -227,7 +227,7 @@
 
 ## 🎬 Demo Notes
 
-> **Demo context (DevLille 2026):** plugin kestra-io/plugin-datagen · feature request [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) · docs [kestra.io/plugins/plugin-datagen](https://kestra.io/plugins/plugin-datagen)
+> **Demo context (DevLille 2026):** plugin kestra-io/plugin-datagen · feature request [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) · generated PR [#55](https://github.com/kestra-io/plugin-datagen/pull/55) · docs [kestra.io/plugins/plugin-datagen](https://kestra.io/plugins/plugin-datagen)
 
 ### Replay the demo
 
