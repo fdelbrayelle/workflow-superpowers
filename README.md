@@ -203,25 +203,21 @@
 
 *— Linus Torvalds*
 
-*DevLille 2026 — notes d'origine pour plugin-datagen :*
+*DevLille 2026 — notes :*
 
 > 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai cas d'usage lié à la gouvernance des données et à la conformité réglementaire. Certaines équipes manipulent des jeux de données contenant des données personnelles, mais elles doivent impérativement respecter le RGPD (notamment l'article 25 sur la protection des données dès la conception). Le problème à résoudre : Aujourd'hui, notre plugin permet de générer des fausses données à la volée, mais il lui manque une fonctionnalité essentielle : pouvoir anonymiser ou masquer à la demande un flux de données existant contenant des informations sensibles (PII). Cette feature d'anonymisation n'existe pas encore. Voyons ensemble la spécification technique pour cette feature d'anonymisation et confions l'intégralité du sujet à notre Plugins Agent Team : du plan de conception jusqu'à la QA ! (ref: issue #53)
 
 > 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real use case related to data governance and regulatory compliance. Some teams work with datasets containing personal data, but must strictly comply with GDPR (in particular Article 25 on data protection by design). The problem to solve: Today, our plugin can generate fake data on the fly, but it's missing an essential feature: the ability to anonymize or mask on demand an existing data stream containing sensitive information (PII). This anonymization feature doesn't exist yet. Let's look at the technical specification together for this anonymization feature and hand off the entire subject to our Plugins Agent Team: from the design plan all the way to QA! (ref: issue #53)
-
-*Demo resources: plugin docs · issue #53 · asciinema backup recording*
 
 ---
 
 ## Slide 16 — « Code is cheap. Show me the talk? »
 
-*DevLille 2026 — notes d'origine pour plugin-datagen :*
+*DevLille 2026 — notes :*
 
 > 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai cas d'usage lié à la gouvernance des données et à la conformité réglementaire. Certaines équipes manipulent des jeux de données contenant des données personnelles, mais elles doivent impérativement respecter le RGPD (notamment l'article 25 sur la protection des données dès la conception). Le problème à résoudre : Aujourd'hui, notre plugin permet de générer des fausses données à la volée, mais il lui manque une fonctionnalité essentielle : pouvoir anonymiser ou masquer à la demande un flux de données existant contenant des informations sensibles (PII). Cette feature d'anonymisation n'existe pas encore. Voyons ensemble la spécification technique pour cette feature d'anonymisation et confions l'intégralité du sujet à notre Plugins Agent Team : du plan de conception jusqu'à la QA ! (ref: issue #53)
 
 > 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real use case related to data governance and regulatory compliance. Some teams work with datasets containing personal data, but must strictly comply with GDPR (in particular Article 25 on data protection by design). The problem to solve: Today, our plugin can generate fake data on the fly, but it's missing an essential feature: the ability to anonymize or mask on demand an existing data stream containing sensitive information (PII). This anonymization feature doesn't exist yet. Let's look at the technical specification together for this anonymization feature and hand off the entire subject to our Plugins Agent Team: from the design plan all the way to QA! (ref: issue #53)
-
-*Demo resources: plugin docs · issue #53 · asciinema backup recording*
 
 ---
 
