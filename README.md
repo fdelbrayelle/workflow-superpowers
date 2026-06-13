@@ -39,21 +39,6 @@
 
 ## CFP
 
-### 🇫🇷 Abstract — Version française
-
-**🦸 Des super-pouvoirs pour vos workflows : Créer un plugin Kestra 100% généré par l'IA**
-
-Le métier de développeur est en pleine mutation. Et si, dès aujourd'hui, votre rôle n'était plus d'écrire du code, mais de piloter des experts numériques ? Tout l'art réside désormais dans le Context Engineering : l'art de structurer la connaissance et les spécifications pour guider l'IA avec une précision chirurgicale.
-
-Dans ce talk, nous allons repousser les limites de la génération de code en déléguant l'intégralité de la création d'un plugin Java pour Kestra à un plugin privé Claude Code développé sur-mesure pour notre Squad, embarquant une flotte d'agents et de skills spécialisés. Oubliez le copier-coller de snippets : ici, l'IA prend les commandes de la conception à la QA. Que vous soyez Data Engineer, Platform Engineer, ou Software Engineer, nous verrons comment l'écosystème de plugins décuple vos capacités d'automatisation.
-
-Ce que nous allons explorer ensemble :
-- **L'IA aux commandes (et le contexte comme carburant) :** Partir d'une simple issue GitHub pour laisser notre plugin Claude Code et ses agents transformer une spécification fonctionnelle en code source Java robuste. Nous verrons comment un Context Engineering efficace permet de border l'IA.
-- **Le développeur, chef d'orchestre :** Comment nous avons conçu ce plugin interne, packagé les bonnes compétences (skills) et orchestré les agents pour gérer le développement, la validation des tests unitaires, la code review et la QA.
-- **Méthodologie avant les outils :** L'approche est entièrement transférable à votre squad et à votre domaine.
-
-Venez découvrir concrètement comment l'IA transforme notre quotidien, automatise les tâches ingrates et nous permet de nous concentrer sur la valeur métier, tout en gardant une maîtrise totale du cycle de vie logiciel !
-
 ### 🇬🇧 Abstract — English version
 
 **🦸 Superpowers for your Workflows: Creating a 100% AI-Generated Kestra Plugin**
@@ -68,6 +53,21 @@ What we will explore together:
 - **Methodology over tools:** The approach is fully transferable to your own squad and domain.
 
 Come and discover how AI transforms our daily routines and lets us focus on business value — all while maintaining absolute control over the software lifecycle!
+
+### 🇫🇷 Abstract — Version française
+
+**🦸 Des super-pouvoirs pour vos workflows : Créer un plugin Kestra 100% généré par l'IA**
+
+Le métier de développeur est en pleine mutation. Et si, dès aujourd'hui, votre rôle n'était plus d'écrire du code, mais de piloter des experts numériques ? Tout l'art réside désormais dans le Context Engineering : l'art de structurer la connaissance et les spécifications pour guider l'IA avec une précision chirurgicale.
+
+Dans ce talk, nous allons repousser les limites de la génération de code en déléguant l'intégralité de la création d'un plugin Java pour Kestra à un plugin privé Claude Code développé sur-mesure pour notre Squad, embarquant une flotte d'agents et de skills spécialisés. Oubliez le copier-coller de snippets : ici, l'IA prend les commandes de la conception à la QA. Que vous soyez Data Engineer, Platform Engineer, ou Software Engineer, nous verrons comment l'écosystème de plugins décuple vos capacités d'automatisation.
+
+Ce que nous allons explorer ensemble :
+- **L'IA aux commandes (et le contexte comme carburant) :** Partir d'une simple issue GitHub pour laisser notre plugin Claude Code et ses agents transformer une spécification fonctionnelle en code source Java robuste. Nous verrons comment un Context Engineering efficace permet de border l'IA.
+- **Le développeur, chef d'orchestre :** Comment nous avons conçu ce plugin interne, packagé les bonnes compétences (skills) et orchestré les agents pour gérer le développement, la validation des tests unitaires, la code review et la QA.
+- **Méthodologie avant les outils :** L'approche est entièrement transférable à votre squad et à votre domaine.
+
+Venez découvrir concrètement comment l'IA transforme notre quotidien, automatise les tâches ingrates et nous permet de nous concentrer sur la valeur métier, tout en gardant une maîtrise totale du cycle de vie logiciel !
 
 ---
 
