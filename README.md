@@ -203,27 +203,27 @@
 
 *— Linus Torvalds*
 
-> 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai cas d'usage lié à la gouvernance des données et à la conformité réglementaire. Certaines équipes manipulent des jeux de données contenant des données personnelles, mais elles doivent impérativement respecter le RGPD (notamment l'article 25 sur la protection des données dès la conception). Le problème à résoudre : Aujourd'hui, notre plugin plugin-datagen permet de générer des fausses données à la volée, mais il lui manque une fonctionnalité essentielle : pouvoir anonymiser ou masquer à la demande un flux de données existant contenant des informations sensibles (PII). Cette feature d'anonymisation n'existe pas encore. Voyons ensemble la spécification technique pour cette feature d'anonymisation et confions l'intégralité du sujet à notre Plugins Agent Team : du plan de conception jusqu'à la QA ! (ref: [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
+> 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai cas d'usage lié à la gouvernance des données et à la conformité réglementaire. Certaines équipes manipulent des jeux de données contenant des données personnelles, mais elles doivent impérativement respecter le RGPD (notamment l'article 25 sur la protection des données dès la conception). Le problème à résoudre : Aujourd'hui, notre plugin permet de générer des fausses données à la volée, mais il lui manque une fonctionnalité essentielle : pouvoir anonymiser ou masquer à la demande un flux de données existant contenant des informations sensibles (PII). Cette feature d'anonymisation n'existe pas encore. Voyons ensemble la spécification technique pour cette feature d'anonymisation et confions l'intégralité du sujet à notre Plugins Agent Team : du plan de conception jusqu'à la QA ! (ref: [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
 
-> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real use case related to data governance and regulatory compliance. Some teams work with datasets containing personal data, but must strictly comply with GDPR (in particular Article 25 on data protection by design). The problem to solve: Today, our plugin-datagen plugin can generate fake data on the fly, but it's missing an essential feature: the ability to anonymize or mask on demand an existing data stream containing sensitive information (PII). This anonymization feature doesn't exist yet. Let's look at the technical specification together for this anonymization feature and hand off the entire subject to our Plugins Agent Team: from the design plan all the way to QA! (ref: [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
+> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real use case related to data governance and regulatory compliance. Some teams work with datasets containing personal data, but must strictly comply with GDPR (in particular Article 25 on data protection by design). The problem to solve: Today, our plugin can generate fake data on the fly, but it's missing an essential feature: the ability to anonymize or mask on demand an existing data stream containing sensitive information (PII). This anonymization feature doesn't exist yet. Let's look at the technical specification together for this anonymization feature and hand off the entire subject to our Plugins Agent Team: from the design plan all the way to QA! (ref: [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
 
-*Demo resources: [plugin-datagen docs](https://kestra.io/plugins/plugin-datagen) · [GitHub issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) · asciinema backup recording*
+*Demo resources: [plugin docs](https://kestra.io/plugins/plugin-datagen) · [GitHub issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) · asciinema backup recording*
 
 ---
 
 ## Slide 16 — « Code is cheap. Show me the talk? »
 
-> 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai cas d'usage lié à la gouvernance des données et à la conformité réglementaire. Certaines équipes manipulent des jeux de données contenant des données personnelles, mais elles doivent impérativement respecter le RGPD (notamment l'article 25 sur la protection des données dès la conception). Le problème à résoudre : Aujourd'hui, notre plugin plugin-datagen permet de générer des fausses données à la volée, mais il lui manque une fonctionnalité essentielle : pouvoir anonymiser ou masquer à la demande un flux de données existant contenant des informations sensibles (PII). Cette feature d'anonymisation n'existe pas encore. Voyons ensemble la spécification technique pour cette feature d'anonymisation et confions l'intégralité du sujet à notre Plugins Agent Team : du plan de conception jusqu'à la QA ! (ref: [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
+> 🇫🇷 Comme dit Linus Torvalds : "Talk is cheap, show me the code." Sauf que c'est la Plugins Agent Team qui va vous montrer le code généré ! Pour cette démo, on part d'un vrai cas d'usage lié à la gouvernance des données et à la conformité réglementaire. Certaines équipes manipulent des jeux de données contenant des données personnelles, mais elles doivent impérativement respecter le RGPD (notamment l'article 25 sur la protection des données dès la conception). Le problème à résoudre : Aujourd'hui, notre plugin permet de générer des fausses données à la volée, mais il lui manque une fonctionnalité essentielle : pouvoir anonymiser ou masquer à la demande un flux de données existant contenant des informations sensibles (PII). Cette feature d'anonymisation n'existe pas encore. Voyons ensemble la spécification technique pour cette feature d'anonymisation et confions l'intégralité du sujet à notre Plugins Agent Team : du plan de conception jusqu'à la QA ! (ref: [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
 
-> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real use case related to data governance and regulatory compliance. Some teams work with datasets containing personal data, but must strictly comply with GDPR (in particular Article 25 on data protection by design). The problem to solve: Today, our plugin-datagen plugin can generate fake data on the fly, but it's missing an essential feature: the ability to anonymize or mask on demand an existing data stream containing sensitive information (PII). This anonymization feature doesn't exist yet. Let's look at the technical specification together for this anonymization feature and hand off the entire subject to our Plugins Agent Team: from the design plan all the way to QA! (ref: [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
+> 🇬🇧 As Linus Torvalds says: "Talk is cheap, show me the code." Except it's the Plugins Agent Team that will show you the generated code! For this demo, we start from a real use case related to data governance and regulatory compliance. Some teams work with datasets containing personal data, but must strictly comply with GDPR (in particular Article 25 on data protection by design). The problem to solve: Today, our plugin can generate fake data on the fly, but it's missing an essential feature: the ability to anonymize or mask on demand an existing data stream containing sensitive information (PII). This anonymization feature doesn't exist yet. Let's look at the technical specification together for this anonymization feature and hand off the entire subject to our Plugins Agent Team: from the design plan all the way to QA! (ref: [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53))
 
-*Demo resources: [plugin-datagen docs](https://kestra.io/plugins/plugin-datagen) · [GitHub issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) · asciinema backup recording*
+*Demo resources: [plugin docs](https://kestra.io/plugins/plugin-datagen) · [GitHub issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) · asciinema backup recording*
 
 ---
 
 ## 🎬 Demo Notes
 
-> **Demo context (DevLille 2026):** plugin [kestra-io/plugin-datagen](https://github.com/kestra-io/plugin-datagen) · feature request [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) · docs [kestra.io/plugins/plugin-datagen](https://kestra.io/plugins/plugin-datagen)
+> **Demo context (DevLille 2026):** plugin [kestra-io/plugin-datagen](https://github.com/kestra-io/plugin-datagen) · feature request [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) · docs [plugin docs](https://kestra.io/plugins/plugin-datagen)
 
 ### Replay the demo
 
@@ -259,10 +259,10 @@ asciinema play -s 3 -i 1.5 $DEMO_DIR/implementation.cast
 **1. 🧑‍💻 Définir le besoin métier** *(2 min)*
 
 Ouvrir dans le navigateur :
-- [kestra.io/plugins/plugin-datagen](https://kestra.io/plugins/plugin-datagen) — montrer les tasks existantes et l'absence de feature d'anonymisation
-- [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) — lire le besoin métier, les acceptance criteria et les exemples YAML
+- [plugin docs](https://kestra.io/plugins/plugin-datagen) — montrer les tasks existantes et l'absence de feature d'anonymisation
+- [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) — lire le besoin métier, les acceptance criteria et les exemples YAML
 
-> "Le plugin plugin-datagen existe déjà, mais il lui manque quelque chose : une feature d'anonymisation de données personnelles (PII). L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner."
+> "Le plugin existe déjà, mais il lui manque quelque chose : une feature d'anonymisation de données personnelles (PII). L'issue a été rédigée par un humain avec tout ce qu'il faut pour coder sans deviner."
 
 **2. Lancer `/kestra-plugin-plan`** *(3-4 min live)*
 
@@ -348,10 +348,10 @@ Un membre de la squad merge la PR et release le plugin via [Plugins Devtools](ht
 **1. 🧑‍💻 Define the business need** *(2 min)*
 
 Open in the browser:
-- [kestra.io/plugins/plugin-datagen](https://kestra.io/plugins/plugin-datagen) — show the existing tasks and the absence of an anonymization feature
-- [plugin-datagen issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) — walk through the business need, acceptance criteria, and YAML examples
+- [plugin docs](https://kestra.io/plugins/plugin-datagen) — show the existing tasks and the absence of an anonymization feature
+- [issue #53](https://github.com/kestra-io/plugin-datagen/issues/53) — walk through the business need, acceptance criteria, and YAML examples
 
-> "The plugin-datagen plugin already exists, but it's missing something: a PII anonymization feature. The issue was written by a human with everything needed to code without guessing."
+> "The plugin already exists, but it's missing something: a PII anonymization feature. The issue was written by a human with everything needed to code without guessing."
 
 **2. Run `/kestra-plugin-plan`** *(3-4 min live)*
 
